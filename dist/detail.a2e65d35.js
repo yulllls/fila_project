@@ -498,7 +498,7 @@ alEx.addEventListener('click', function () {
     asterionBtn.textContent = text;
     asterionBtn.style.fontSize = '12px';
   } else {
-    asterionBtn.textContent = '별점' + '.fa-angle-down';
+    asterionBtn.innerHTML = '별점 <i class="fas fa-angle-down"></i>';
     asterionBtn.style.fontSize = '';
   }
   asterionList.style.display = 'none';
@@ -528,7 +528,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50513" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55267" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

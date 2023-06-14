@@ -467,7 +467,7 @@ alEx.addEventListener('click', () => {
     asterionBtn.textContent = text;
     asterionBtn.style.fontSize = '12px';
   } else {
-    asterionBtn.textContent = '별점'+'.fa-angle-down';
+    asterionBtn.innerHTML = '별점 <i class="fas fa-angle-down"></i>';
     asterionBtn.style.fontSize = '';
   }
   asterionList.style.display = 'none';

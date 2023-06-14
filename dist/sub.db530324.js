@@ -715,14 +715,14 @@ for (var i = 0; i < _data.default.length; i++) {
   shopBoxLink.appendChild(productDiv);
   shopBoxDiv[i].appendChild(shopBoxLink);
 
-  /* shopBoxDiv[i].appendChild(productDiv) */
+  // shopBoxDiv[i].appendChild(productDiv)
 }
 
 var img_hidden2 = document.querySelectorAll('.img_hidden2');
 var _loop = function _loop(_i7) {
   var timer;
   shopbox[_i7].addEventListener('mouseover', function () {
-    /* img_hidden2[i].style.display = 'block' */
+    // img_hidden2[i].style.display = 'block'
     timer = setTimeout(function () {
       img_hidden2[_i7].style.opacity = '1';
     }, 1000);
@@ -733,14 +733,14 @@ var _loop = function _loop(_i7) {
   shopbox[_i7].addEventListener('mouseout', function () {
     clearTimeout(timer);
     img_hidden2[_i7].style.opacity = '0';
-    /* img_hidden2[i].style.display = 'none' */
+    //img_hidden2[i].style.display = 'none' 
   });
 };
 for (var _i7 = 0; _i7 < img_hidden2.length; _i7++) {
   _loop(_i7);
 }
 var genderAllDiv = document.querySelectorAll('.genderAll');
-/* const genderDiv = document.querySelectorAll('.gender') */
+//const genderDiv = document.querySelectorAll('.gender')
 
 var genderDivClick = false;
 var genderAllDivClick = false;
@@ -883,7 +883,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50513" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55267" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

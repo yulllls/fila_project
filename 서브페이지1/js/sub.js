@@ -540,7 +540,7 @@ for (let i = 0; i < shopBoxData.length; i++) {
   shopBoxLink.appendChild(productDiv);
   shopBoxDiv[i].appendChild(shopBoxLink);
 
-  /* shopBoxDiv[i].appendChild(productDiv) */
+  // shopBoxDiv[i].appendChild(productDiv)
 }
 
 
@@ -550,7 +550,7 @@ const img_hidden2 = document.querySelectorAll('.img_hidden2')
 for (let i = 0; i < img_hidden2.length; i++) {
   let timer;
   shopbox[i].addEventListener('mouseover', () => {
-    /* img_hidden2[i].style.display = 'block' */
+    // img_hidden2[i].style.display = 'block'
     timer = setTimeout(() => {
       img_hidden2[i].style.opacity = '1'
     }, 1000);
@@ -563,7 +563,7 @@ for (let i = 0; i < img_hidden2.length; i++) {
   shopbox[i].addEventListener('mouseout', () => {
     clearTimeout(timer);
     img_hidden2[i].style.opacity = '0'
-    /* img_hidden2[i].style.display = 'none' */
+    //img_hidden2[i].style.display = 'none' 
   })
 }
 
@@ -574,7 +574,7 @@ for (let i = 0; i < img_hidden2.length; i++) {
 
 
 const genderAllDiv = document.querySelectorAll('.genderAll')
-/* const genderDiv = document.querySelectorAll('.gender') */
+//const genderDiv = document.querySelectorAll('.gender')
 
 
 let genderDivClick = false;
