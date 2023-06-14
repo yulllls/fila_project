@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA,EAAE,QAAA,CAAW,UAGb,KACE,SAAA,CACA","file":"style.a41eb724.css","sourceRoot":"..","sourcesContent":["*{margin: 0; padding: 0;}\r\n\r\n\r\nbody{\r\n  color: red;\r\n  background-color:burlywood\r\n}"]}

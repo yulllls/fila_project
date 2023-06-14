@@ -1,0 +1,879 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blur_filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 5;
+  display: none;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  transition: 0.5s;
+}
+header .header_main {
+  width: 1680px;
+  margin: 0 auto;
+  display: flex;
+  /* logo */
+}
+header .header_main .logo {
+  display: flex;
+  width: 15%;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+header .header_main .logo img {
+  width: 100px;
+  height: 33px;
+}
+header .header_main .lnb {
+  width: 40%;
+  margin: 0 15%;
+  cursor: pointer;
+  position: relative;
+}
+header .header_main .lnb .lnb_list ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 18px;
+  height: 100px;
+}
+header .header_main .lnb .lnb_list li {
+  height: 100px;
+  line-height: 100px;
+  width: 100px;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+}
+header .header_main .gnb {
+  width: 15%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lnb_menu1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  transition: 0.3s;
+  height: 580px;
+  background-color: white;
+}
+.lnb_menu1 .header_main .lnb .lnb_list ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 18px;
+  height: 100px;
+}
+.lnb_menu1 .header_main .lnb .lnb_list li {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+}
+.lnb_menu1 .header_main .lnb .lnb_list .women {
+  text-decoration: underline;
+  text-underline-offset: 13px;
+}
+.lnb_menu1 .lnb_menu_women {
+  padding-top: 20px;
+  position: absolute;
+  display: flex;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1680px;
+  margin: 0 auto;
+}
+.lnb_menu1 .lnb_menu_women .menu_left {
+  position: relative;
+  display: block;
+  width: 370px;
+  text-align: center;
+}
+.lnb_menu1 .lnb_menu_women .menu_left h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu1 .lnb_menu_women .menu_left ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu1 .lnb_menu_women .menu_left ul .sail {
+  margin-bottom: 20px;
+}
+.lnb_menu1 .lnb_menu_women .menu_left li:hover {
+  color: red;
+}
+.lnb_menu1 .lnb_menu_women .menu_left::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 370px;
+  width: 1px;
+  height: 375px;
+  background-color: #e8e8e8;
+  z-index: 80;
+}
+.lnb_menu1 .lnb_menu_women .menu_center {
+  width: 940px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.lnb_menu1 .lnb_menu_women .menu_center .clothes {
+  margin-right: 10px;
+}
+.lnb_menu1 .lnb_menu_women .menu_center .clothes h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu1 .lnb_menu_women .menu_center .clothes ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu1 .lnb_menu_women .menu_center .shoes {
+  margin-right: 10px;
+}
+.lnb_menu1 .lnb_menu_women .menu_center .shoes h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu1 .lnb_menu_women .menu_center .shoes ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu1 .lnb_menu_women .menu_center .articles {
+  margin-right: 10px;
+}
+.lnb_menu1 .lnb_menu_women .menu_center .articles h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu1 .lnb_menu_women .menu_center .articles ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu1 .lnb_menu_women .menu_center .underwear h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu1 .lnb_menu_women .menu_center .underwear ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu1 .menu_center li:hover {
+  color: red;
+}
+.lnb_menu1 .menu_right {
+  width: 330px;
+  text-align: center;
+}
+.lnb_menu1 .menu_right h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu1 .menu_right ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu1 .menu_right li:hover {
+  color: red;
+}
+.lnb_menu1 .menu_right::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 350px;
+  width: 1px;
+  height: 375px;
+  background-color: #e8e8e8;
+  z-index: 80;
+}
+
+.lnb_menu2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  transition: 0.3s;
+  height: 580px;
+  background-color: white;
+}
+.lnb_menu2 .header_main .lnb .lnb_list ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 18px;
+  height: 100px;
+}
+.lnb_menu2 .header_main .lnb .lnb_list li {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+}
+.lnb_menu2 .header_main .lnb .lnb_list .man {
+  text-decoration: underline;
+  text-underline-offset: 13px;
+}
+.lnb_menu2 .lnb_menu_man {
+  padding-top: 20px;
+  position: absolute;
+  display: flex;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1680px;
+  margin: 0 auto;
+}
+.lnb_menu2 .lnb_menu_man .menu_left {
+  position: relative;
+  display: block;
+  width: 370px;
+  text-align: center;
+}
+.lnb_menu2 .lnb_menu_man .menu_left h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu2 .lnb_menu_man .menu_left ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu2 .lnb_menu_man .menu_left ul .sail {
+  margin-bottom: 20px;
+}
+.lnb_menu2 .lnb_menu_man .menu_left li:hover {
+  color: red;
+}
+.lnb_menu2 .lnb_menu_man .menu_left::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 370px;
+  width: 1px;
+  height: 375px;
+  background-color: #e8e8e8;
+  z-index: 80;
+}
+.lnb_menu2 .lnb_menu_man .menu_center {
+  width: 934px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.lnb_menu2 .lnb_menu_man .menu_center .clothes {
+  margin-right: 10px;
+}
+.lnb_menu2 .lnb_menu_man .menu_center .clothes h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu2 .lnb_menu_man .menu_center .clothes ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu2 .lnb_menu_man .menu_center .shoes {
+  margin-right: 10px;
+}
+.lnb_menu2 .lnb_menu_man .menu_center .shoes h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu2 .lnb_menu_man .menu_center .shoes ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu2 .lnb_menu_man .menu_center .articles {
+  margin-right: 10px;
+}
+.lnb_menu2 .lnb_menu_man .menu_center .articles h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu2 .lnb_menu_man .menu_center .articles ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu2 .lnb_menu_man .menu_center .underwear h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu2 .lnb_menu_man .menu_center .underwear ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu2 .menu_center li:hover {
+  color: red;
+}
+.lnb_menu2 .menu_right {
+  width: 342px;
+  text-align: center;
+}
+.lnb_menu2 .menu_right h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu2 .menu_right ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu2 .menu_right li:hover {
+  color: red;
+}
+.lnb_menu2 .menu_right::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 350px;
+  width: 1px;
+  height: 375px;
+  background-color: #e8e8e8;
+  z-index: 80;
+}
+
+.lnb_menu3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  transition: 0.3s;
+  height: 580px;
+  background-color: white;
+}
+.lnb_menu3 .header_main .lnb .lnb_list ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 18px;
+  height: 100px;
+}
+.lnb_menu3 .header_main .lnb .lnb_list li {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+}
+.lnb_menu3 .header_main .lnb .lnb_list .kids {
+  text-decoration: underline;
+  text-underline-offset: 13px;
+}
+.lnb_menu3 .lnb_menu_kids {
+  padding-top: 20px;
+  position: absolute;
+  display: flex;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1680px;
+  margin: 0 auto;
+}
+.lnb_menu3 .lnb_menu_kids .menu_left {
+  position: relative;
+  display: block;
+  width: 370px;
+  text-align: center;
+}
+.lnb_menu3 .lnb_menu_kids .menu_left h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu3 .lnb_menu_kids .menu_left ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu3 .lnb_menu_kids .menu_left ul .sail {
+  margin-bottom: 20px;
+}
+.lnb_menu3 .lnb_menu_kids .menu_left li:hover {
+  color: red;
+}
+.lnb_menu3 .lnb_menu_kids .menu_left::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 370px;
+  width: 1px;
+  height: 375px;
+  background-color: #e8e8e8;
+  z-index: 80;
+}
+.lnb_menu3 .lnb_menu_kids .menu_center {
+  width: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.lnb_menu3 .lnb_menu_kids .menu_center .clothes {
+  margin-right: 10px;
+}
+.lnb_menu3 .lnb_menu_kids .menu_center .clothes h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu3 .lnb_menu_kids .menu_center .clothes ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu3 .lnb_menu_kids .menu_center .shoes {
+  margin-right: 10px;
+}
+.lnb_menu3 .lnb_menu_kids .menu_center .shoes h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu3 .lnb_menu_kids .menu_center .shoes ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu3 .lnb_menu_kids .menu_center .articles {
+  margin-right: 10px;
+}
+.lnb_menu3 .lnb_menu_kids .menu_center .articles h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.lnb_menu3 .lnb_menu_kids .menu_center .articles ul li {
+  padding-bottom: 12px;
+}
+.lnb_menu3 .menu_center li:hover {
+  color: red;
+}
+
+.lnb_menu4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  transition: 0.3s;
+  height: 580px;
+  background-color: white;
+}
+.lnb_menu4 .header_main .lnb .lnb_list ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 18px;
+  height: 100px;
+}
+.lnb_menu4 .header_main .lnb .lnb_list li {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+}
+.lnb_menu4 .header_main .lnb .lnb_list .brand {
+  text-decoration: underline;
+  text-underline-offset: 13px;
+}
+.lnb_menu4 .lnb_menu_Brand {
+  padding-top: 20px;
+  overflow: hidden;
+  width: 1680px;
+  margin: 0 auto;
+}
+.lnb_menu4 .lnb_menu_Brand .brand_img {
+  display: flex;
+}
+.lnb_menu4 .lnb_menu_Brand .brand_img .brandImgBox {
+  width: 320px;
+  height: 390px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+.lnb_menu4 .lnb_menu_Brand .brand_img .brandImgBox:last-child {
+  margin-right: 0;
+}
+.lnb_menu4 .lnb_menu_Brand .brand_img .brandImgBox img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: 0.5s;
+}
+.lnb_menu4 .lnb_menu_Brand .brand_img .brandImgBox img:hover {
+  transform: scale(1.1);
+}
+.lnb_menu4 .brandImgText {
+  width: 100%;
+  display: flex;
+}
+.lnb_menu4 .brandImgText h3 {
+  margin-top: 20px;
+  width: 335px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.banner {
+  padding-top: 120px;
+  width: 1420px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+.banner img {
+  width: 1420px;
+  height: 300px;
+}
+.banner .blur_filter {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.349);
+  z-index: 10px;
+  width: 1420px;
+  height: 300px;
+  bottom: 0;
+  left: 0;
+}
+.banner h3 {
+  position: absolute;
+  left: 55px;
+  bottom: 35px;
+  color: white;
+  font-size: 50px;
+}
+
+.filter {
+  overflow: hidden;
+  padding-top: 20px;
+  width: 1420px;
+  height: 50px;
+  margin: 0 auto;
+}
+.filter .left_filter {
+  float: left;
+  margin-right: 1150px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.filter .rigth_filter {
+  float: left;
+  margin-right: 35px;
+  font-weight: bold;
+}
+.filter .rigth_filter #list {
+  border: none;
+  /* background-color: #f0f0f0; */
+  box-sizing: border-box;
+  /* height: 18px; */
+  cursor: pointer;
+  font-weight: bold;
+  width: 120px;
+}
+.filter .box_filter {
+  float: left;
+}
+.filter .box_filter .fourbox {
+  float: left;
+  margin-top: 3px;
+  margin-right: 13px;
+}
+.filter .box_filter .fourbox .fas {
+  font-size: 22px;
+  color: #888;
+}
+.filter .box_filter .ninebox {
+  float: left;
+  margin-top: 3px;
+}
+.filter .box_filter .ninebox .fas {
+  font-size: 22px;
+  color: black;
+}
+
+.menu {
+  width: 1420px;
+  height: 300px;
+  background-color: #888;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: none;
+  overflow: hidden;
+}
+.menu .menu_list_all {
+  float: left;
+  width: 236px;
+}
+.menu .menu_list_all #tennis_chk {
+  display: none;
+}
+.menu .menu_list_all #running_chk {
+  display: none;
+}
+.menu .menu_list_all #life_chk {
+  display: none;
+}
+.menu .menu_list_all #training_chk {
+  display: none;
+}
+.menu .menu_list_all #golf_chk {
+  display: none;
+}
+.menu .menu_list3 {
+  overflow: hidden;
+}
+.menu .menu_list3 .color_one {
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.menu .menu_list3 .color_white {
+  background-color: white;
+}
+.menu .menu_list3 .color_black {
+  background-color: black;
+}
+.menu .menu_list3 .color_blue {
+  background-color: blue;
+}
+.menu .menu_list3 .color_green {
+  background-color: green;
+}
+.menu .menu_list3 .color_gray {
+  background-color: gray;
+}
+.menu .menu_list3 .color_pink {
+  background-color: pink;
+}
+.menu .menu_list3 .color_red {
+  background-color: red;
+}
+.menu .menu_list3 .color_wheat {
+  background-color: wheat;
+}
+.menu .menu_list3 .color_yellow {
+  background-color: yellow;
+}
+.menu .menu_list3 .color_orange {
+  background-color: orange;
+}
+.menu .menu_list3 .color_darkblue {
+  background-color: #002053;
+}
+.menu .menu_list3 .color_darkgreen {
+  background-color: darkgreen;
+}
+.menu .menu_list4 .size_list {
+  overflow: hidden;
+}
+.menu .menu_list4 .size_list .size_all {
+  float: left;
+  width: 40px;
+  height: 50px;
+  border: 1px solid #555;
+  background-color: white;
+  box-sizing: border-box;
+  margin-right: 8px;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 10px;
+  color: #444;
+}
+.menu .menu_list5 #pr39_chk {
+  display: none;
+}
+.menu .menu_list5 #pr39_49_chk {
+  display: none;
+}
+.menu .menu_list5 #pr49_59_chk {
+  display: none;
+}
+.menu .menu_list5 #pr59_79_chk {
+  display: none;
+}
+.menu .menu_list5 #pr79_chk {
+  display: none;
+}
+
+.main {
+  width: 1420px;
+  height: 1000px;
+  background-color: brown;
+  margin: 0 auto;
+}
+.main .container {
+  overflow: hidden;
+}
+.main .container .shop_box {
+  float: left;
+  width: 272px;
+  height: 360px;
+  background-color: aqua;
+  border: 1px solid black;
+  box-sizing: border-box;
+  margin-right: 15px;
+  margin-bottom: 190px;
+  position: relative;
+  display: block;
+}
+.main .container .shop_box .product {
+  position: relative;
+  width: 100%;
+}
+.main .container .shop_box .product img {
+  width: 100%;
+  height: auto;
+}
+.main .container .shop_box .product .img_hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+}
+.main .container .shop_box .product:hover .img_hidden {
+  opacity: 1;
+}
+.main .container .shop_box .shop_menu {
+  position: absolute;
+  bottom: -160px;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background-color: slateblue;
+}
+.main .container .shop_box .shop_menu .gender {
+  margin-top: 10px;
+  color: white;
+  font-size: 12px;
+}
+.main .container .shop_box .shop_menu .shopName {
+  font-size: 17px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.main .container .shop_box .shop_menu .shopPrice {
+  font-size: 16px;
+  color: white;
+}
+.main .container .shop_box .shop_menu .purchase {
+  width: 70%;
+  height: 30px;
+  border-radius: 30px;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  transition: 0.3s;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 30px;
+}
+.main .container .shop_box .shop_menu .fa-heart {
+  position: absolute;
+  right: 44px;
+  bottom: 12px;
+  font-size: 23px;
+  transition: 0.5s;
+  color: darkgray;
+}
+.main .container .shop_box .shop_menu .fa-shopping-bag {
+  position: absolute;
+  right: 11px;
+  bottom: 13px;
+  font-size: 23px;
+  transition: 0.5s;
+  color: darkgray;
+}
+.main .container .shop_box .shop_menu .purchase:hover {
+  color: white;
+  background-color: #002053;
+}
+.main .container .shop_box .shop_menu .fa-heart:hover {
+  color: #002053;
+}
+.main .container .shop_box .shop_menu .fa-shopping-bag:hover {
+  color: #002053;
+}
+.main .container .color_box {
+  overflow: hidden;
+  padding-top: 10px;
+}
+.main .container .color_box .color_one {
+  float: left;
+  width: 20px;
+  height: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  margin-right: 3px;
+}
+.main .container .color_box .color_white {
+  background-color: white;
+}
+.main .container .color_box .color_black {
+  background-color: black;
+}
+.main .container .color_box .color_blue {
+  background-color: blue;
+}
+.main .container .color_box .color_green {
+  background-color: green;
+}
+.main .container .color_box .color_gray {
+  background-color: gray;
+}
+.main .container .color_box .color_pink {
+  background-color: pink;
+}
+.main .container .color_box .color_red {
+  background-color: red;
+}
+.main .container .color_box .color_wheat {
+  background-color: wheat;
+}
+.main .container .color_box .color_yellow {
+  background-color: yellow;
+}
+.main .container .color_box .color_orange {
+  background-color: orange;
+}
+.main .container .color_box .color_darkblue {
+  background-color: #002053;
+}
+.main .container .color_box .color_darkgreen {
+  background-color: darkgreen;
+}
+.main .shop_box:nth-child(5) {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=/style.c17a09ca.css.map */
