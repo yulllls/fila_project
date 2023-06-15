@@ -781,8 +781,8 @@ function renderPage(page) {
   }
 }
 renderPage(1);
-renderPagination(1);
-function renderPagination(currentPage) {
+renderOtherPagination(1);
+function renderOtherPagination(currentPage) {
   var pagination = document.getElementById('js-pagination');
   pagination.innerHTML = '';
   var firstPage = 1;
@@ -802,7 +802,7 @@ function renderPagination(currentPage) {
   firstA.addEventListener('click', function (event) {
     event.preventDefault();
     renderPage(firstPage);
-    renderPagination(firstPage);
+    renderOtherPagination(firstPage);
   });
   firstLi.appendChild(firstA);
   pagination.appendChild(firstLi);
@@ -813,7 +813,7 @@ function renderPagination(currentPage) {
   prevA.addEventListener('click', function (event) {
     event.preventDefault();
     renderPage(prevPage);
-    renderPagination(prevPage);
+    renderOtherPagination(prevPage);
   });
   prevLi.appendChild(prevA);
   pagination.appendChild(prevLi);
@@ -829,7 +829,7 @@ function renderPagination(currentPage) {
       return function (event) {
         event.preventDefault();
         renderPage(i);
-        renderPagination(i);
+        renderOtherPagination(i);
       };
     }(i));
     li.appendChild(a);
@@ -842,7 +842,7 @@ function renderPagination(currentPage) {
   nextA.addEventListener('click', function (event) {
     event.preventDefault();
     renderPage(nextPage);
-    renderPagination(nextPage);
+    renderOtherPagination(nextPage);
   });
   nextLi.appendChild(nextA);
   pagination.appendChild(nextLi);
@@ -853,12 +853,12 @@ function renderPagination(currentPage) {
   lastA.addEventListener('click', function (event) {
     event.preventDefault();
     renderPage(lastPage);
-    renderPagination(lastPage);
+    renderOtherPagination(lastPage);
   });
   lastLi.appendChild(lastA);
   pagination.appendChild(lastLi);
 }
-},{"./data.js":"서브페이지1/js/data.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./data.js":"서브페이지1/js/data.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -883,7 +883,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55267" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55556" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
@@ -1027,5 +1027,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","서브페이지1/js/sub.js"], null)
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","서브페이지1/js/sub.js"], null)
 //# sourceMappingURL=/sub.db530324.js.map

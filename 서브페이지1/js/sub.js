@@ -624,9 +624,9 @@ function renderPage(page) {
 }
 
 renderPage(1);
-renderPagination(1);
+renderOtherPagination(1);
 
-function renderPagination(currentPage) {
+function renderOtherPagination(currentPage) {
   var pagination = document.getElementById('js-pagination');
   pagination.innerHTML = '';
 
@@ -650,7 +650,7 @@ function renderPagination(currentPage) {
   firstA.addEventListener('click', function(event) {
       event.preventDefault();
       renderPage(firstPage);
-      renderPagination(firstPage);
+      renderOtherPagination(firstPage);
   });
   firstLi.appendChild(firstA);
   pagination.appendChild(firstLi);
@@ -662,7 +662,7 @@ function renderPagination(currentPage) {
   prevA.addEventListener('click', function(event) {
       event.preventDefault();
       renderPage(prevPage);
-      renderPagination(prevPage);
+      renderOtherPagination(prevPage);
   });
   prevLi.appendChild(prevA);
   pagination.appendChild(prevLi);
@@ -679,7 +679,7 @@ function renderPagination(currentPage) {
           return function(event) {
               event.preventDefault();
               renderPage(i);
-              renderPagination(i);
+              renderOtherPagination(i);
           };
       })(i));
       li.appendChild(a);
@@ -693,7 +693,7 @@ function renderPagination(currentPage) {
   nextA.addEventListener('click', function(event) {
       event.preventDefault();
       renderPage(nextPage);
-      renderPagination(nextPage);
+      renderOtherPagination(nextPage);
   });
   nextLi.appendChild(nextA);
   pagination.appendChild(nextLi);
@@ -705,7 +705,7 @@ function renderPagination(currentPage) {
   lastA.addEventListener('click', function(event) {
       event.preventDefault();
       renderPage(lastPage);
-      renderPagination(lastPage);
+      renderOtherPagination(lastPage);
   });
   lastLi.appendChild(lastA);
   pagination.appendChild(lastLi);
