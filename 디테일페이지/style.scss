@@ -1753,6 +1753,7 @@ header {
           border-radius: 5px;
           font-size: 14px;
           cursor: pointer;
+          margin-top: 30px;
         }
 
         .asterion_list {
@@ -1765,15 +1766,18 @@ header {
           border: 1px solid #888;
           border-radius: 10px;
 
-          .al_all{
+          .al_all {
             margin-left: 25px;
             width: 300px;
             text-align: left;
             line-height: 50px;
             border-bottom: 1px solid #888;
+            transition: 0.2s;
+            cursor: pointer;
+            color: #888;
 
             .fa-square,
-            .fa-check-square{
+            .fa-check-square {
               font-size: 20px;
             }
           }
@@ -1790,6 +1794,7 @@ header {
 
             }
           }
+
           .al4 {
             position: relative;
 
@@ -1801,6 +1806,7 @@ header {
 
             }
           }
+
           .al3 {
             position: relative;
 
@@ -1812,6 +1818,7 @@ header {
 
             }
           }
+
           .al2 {
             position: relative;
 
@@ -1823,6 +1830,7 @@ header {
 
             }
           }
+
           .al1 {
             position: relative;
 
@@ -1835,7 +1843,7 @@ header {
             }
           }
 
-          .al_ex{
+          .al_ex {
             margin-top: 15px;
             width: 300px;
             height: 50px;
@@ -1849,18 +1857,109 @@ header {
             margin-left: 25px;
           }
 
-          .al_ex:hover{
+          .al_ex:hover {
             color: white;
             background-color: #002053;
+          }
+
+          .al_all:hover {
+            color: #002053;
           }
         }
 
 
+        .size_btn {
+          width: 70px;
+          height: 40px;
+          background-color: white;
+          border: 1px solid #888;
+          margin-left: 10px;
+          line-height: 40px;
+          border-radius: 5px;
+          font-size: 14px;
+          cursor: pointer;
+          margin-top: 30px;
+        }
 
+        .size_list_chk {
+          position: absolute;
+          top: 50px;
+          left: 151px;
+          width: 338px;
+          height: 210px;
+          padding-top: 20px;
+          border: 1px solid #888;
+          border-radius: 10px;
+          overflow: hidden;
+          padding-left: 10px;
+
+          .sl_all {
+            float: left;
+            margin-left: 15px;
+            width: 90px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #888;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            transition: 0.3s;
+            color: black;
+            background-color: white;
+            cursor: pointer;
+          }
+
+          .sl_ex {
+            float: left;
+            margin-top: 5px;
+            width: 300px;
+            height: 50px;
+            border: 1px solid #888;
+            border-radius: 5px;
+            box-sizing: border-box;
+            color: black;
+            font-size: 18px;
+            line-height: 48px;
+            transition: 0.3s;
+            margin-left: 15px;
+          }
+
+
+          .sl_ex:hover {
+            background-color: #002053;
+            color: white;
+          }
+
+        }
+
+        .review_comment {
+          width: 1000px;
+          height: 100px;
+          margin-left: 20px;
+        }
+
+        .add_btn {
+          width: 75px;
+          height: 50px;
+          border-radius: 5px;
+          margin-left: 10px;
+        }
 
 
       }
+      .review_comment_list{
+        width: 1175px;
+        margin-left: 75px;
+        background-color: white;
+        margin-top: 20px;
+        text-align: left;
 
+        p{
+          span{
+            margin-right: 20px;
+          }
+        }
+      }
 
     }
 
@@ -1870,122 +1969,133 @@ header {
 
 }
 
-.footer{
+
+
+.footer {
   width: 100%;
   height: 430px;
   background-color: #f0f0f0;
 
-  .footer_up{
+  .footer_up {
     padding-top: 50px;
     width: 1680px;
     margin: 0 auto;
     overflow: hidden;
 
-    .logo{margin-left: 50px;
- float: left;
+    .logo {
+      margin-left: 50px;
+      float: left;
       width: 200px;
     }
 
-    .left{float: left;
+    .left {
+      float: left;
       width: 830px;
-        ul{
-          overflow: hidden;
-          margin-bottom: 50px;
-          li{
-            float: left;
-            margin-right: 20px;
-            position: relative;
-            cursor: pointer;
-            font-size: 14px;
-          }
-  
-          .li::before{
-            content: '';
-            display: block;
-            width: 1px;
-            height: 20px;
-            background-color: black;
-            position: absolute;
-            top: 1px;left: -10px;
-          }
-        }
-  
-        .p1{
-          margin-bottom: 20px;
-          font-size: 14px;
-          color: #a0a0a0;
-        }
-      
-        .p2{
-          font-size: 14px;
-          color: #a0a0a0;
-        }
-    }
-  
-  
-      .right{float: left;
-      
-        .cs_center{
-          width: 150px;
-          height: 40px;
-          border: 1px solid black;
-          border-radius: 15px;
-          text-align: center;
-          line-height: 40px;
-          margin-bottom: 20px;
-          transition: 0.3s;
-          font-weight: bold;
-          font-size: 14px;
+
+      ul {
+        overflow: hidden;
+        margin-bottom: 50px;
+
+        li {
+          float: left;
+          margin-right: 20px;
+          position: relative;
           cursor: pointer;
-        }
-  
-        .cs_center:hover{
-          background-color: #002053;
-          color: white;
-        }
-  
-        p{
-          margin-top: 15px;
           font-size: 14px;
-          color: #a0a0a0;
+        }
+
+        .li::before {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 20px;
+          background-color: black;
+          position: absolute;
+          top: 1px;
+          left: -10px;
         }
       }
 
+      .p1 {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #a0a0a0;
+      }
+
+      .p2 {
+        font-size: 14px;
+        color: #a0a0a0;
+      }
+    }
+
+
+    .right {
+      float: left;
+
+      .cs_center {
+        width: 150px;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 40px;
+        margin-bottom: 20px;
+        transition: 0.3s;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .cs_center:hover {
+        background-color: #002053;
+        color: white;
+      }
+
+      p {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #a0a0a0;
+      }
+    }
+
   }
 
-  .footer_middle{
+  .footer_middle {
     width: 1680px;
     margin: 0 auto;
     overflow: hidden;
     margin-top: 30px;
 
 
-    .ico{
+    .ico {
       float: left;
       margin-left: 1080px;
       width: 200px;
       height: 22px;
 
-      img{
-       height: 22px;
-       margin-right: 12px;
+      img {
+        height: 22px;
+        margin-right: 12px;
       }
-   }
+    }
 
   }
 
-  .footer_under{
+  .footer_under {
     width: 1680px;
     margin: 0 auto;
     overflow: hidden;
     margin-top: 50px;
-    .left{
+
+    .left {
       float: left;
       margin-left: 250px;
       width: 830px;
-      ul{
+
+      ul {
         overflow: hidden;
-        li{
+
+        li {
           font-size: 14px;
           float: left;
           margin-right: 20px;
@@ -1993,39 +2103,40 @@ header {
           cursor: pointer;
         }
 
-        .li::before{
+        .li::before {
           content: '';
           display: block;
           width: 1px;
           height: 20px;
           background-color: black;
           position: absolute;
-          top: 1px;left: -10px;
+          top: 1px;
+          left: -10px;
         }
       }
     }
 
 
-    .right{
+    .right {
       float: left;
 
 
-    p{
-      margin-right: 15px;
-      float: left;
-      font-size: 14px;
+      p {
+        margin-right: 15px;
+        float: left;
+        font-size: 14px;
+      }
+
+      #link {
+        float: left;
+        border: none;
+        background-color: #f0f0f0;
+        box-sizing: border-box;
+        height: 18px;
+        cursor: pointer;
+        font-weight: bold;
+      }
     }
-
-    #link{
-      float: left;
-      border: none;
-      background-color: #f0f0f0;
-      box-sizing: border-box;
-      height: 18px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-  }
   }
 
 }

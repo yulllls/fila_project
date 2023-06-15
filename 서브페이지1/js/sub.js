@@ -254,6 +254,7 @@ filter.addEventListener('click', () => {
   }
 });
 
+
 const wear = document.querySelector('.wear')
 const wearlist = document.querySelectorAll('.wear li')
 

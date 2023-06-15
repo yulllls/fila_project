@@ -426,35 +426,63 @@ for (let i = 0; i < tabList2.length; i++) {
 
 const asterionBtn = document.querySelector('.asterion_btn')
 const asterionList = document.querySelector('.asterion_list')
-
+const sizeBtn = document.querySelector('.size_btn')
+const sizeListChk = document.querySelector('.size_list_chk')
 
 asterionList.style.display = 'none'
+sizeListChk.style.display = 'none'
 
-let isListVisible = false
+let isListVisible = false;
+let sizeListChkClick = false;
 
 asterionBtn.addEventListener('click', () => {
   if (isListVisible) {
     asterionList.style.display = 'none'
-    isListVisible = false
+    isListVisible = false;
   } else {
     asterionList.style.display = 'block'
-    isListVisible = true
+    sizeListChk.style.display = 'none'
+    isListVisible = true;
+    sizeListChkClick = false;
   }
 })
 
+sizeBtn.addEventListener('click', () => {
+  if (sizeListChkClick) {
+    sizeListChk.style.display = 'none'
+    sizeListChkClick = false;
+  } else {
+    sizeListChk.style.display = 'block'
+    asterionList.style.display = 'none'
+    sizeListChkClick = true;
+    isListVisible = false;
+  }
+})
 
 const asterionListtAll = document.querySelectorAll('.asterion_list p')
 const alEx = document.querySelector('.al_ex')
 
 asterionListtAll.forEach(asterionListtAlls => {
   asterionListtAlls.addEventListener('click', () => {
+    // Remove the fa-check-square class from any other elements that have it
+    asterionListtAll.forEach(el => {
+      const checkedIcon = el.querySelector('i.fa-check-square');
+      if (checkedIcon) {
+        checkedIcon.classList.replace('fa-check-square', 'fa-square');
+        el.style.color = '';
+      }
+    });
+
+    // Toggle the fa-check-square and fa-square classes on the clicked element
     const icon = asterionListtAlls.querySelector('i.fa-square');
     if (icon) {
       icon.classList.replace('fa-square', 'fa-check-square');
+      asterionListtAlls.style.color = '#002053';
     } else {
       const checkedIcon = asterionListtAlls.querySelector('i.fa-check-square');
       if (checkedIcon) {
         checkedIcon.classList.replace('fa-check-square', 'fa-square');
+        asterionListtAlls.style.color = '';
       }
     }
   });
@@ -465,10 +493,142 @@ alEx.addEventListener('click', () => {
   if (checkedItem) {
     const text = checkedItem.parentNode.textContent.trim();
     asterionBtn.textContent = text;
-    asterionBtn.style.fontSize = '12px';
+    asterionBtn.style.fontSize = '14px';
+    asterionBtn.style.width = '90px';
+    asterionBtn.style.border = '1px solid red';
+
   } else {
     asterionBtn.innerHTML = '별점 <i class="fas fa-angle-down"></i>';
     asterionBtn.style.fontSize = '';
   }
   asterionList.style.display = 'none';
 });
+
+
+const slEx = document.querySelector('.sl_ex')
+const slAll = document.querySelectorAll('.sl_all')
+
+
+  slAll.forEach(slAlls => {
+    slAlls.addEventListener('click', () => {
+      // Reset all slAll elements to their default style and remove the 'selected' class
+      slAll.forEach(elem => {
+        elem.style.color = '';
+        elem.style.backgroundColor = '';
+        elem.classList.remove('selected');
+      });
+      
+      // Apply the new style to the clicked element and add the 'selected' class
+      slAlls.style.color = 'white';
+      slAlls.style.backgroundColor = '#002053';
+      slAlls.classList.add('selected');
+    });
+  });
+  
+  slEx.addEventListener('click', () => {
+    sizeListChk.style.display = 'none';
+    
+    // Find the selected slAll element
+    const selectedSlAll = document.querySelector('.sl_all.selected');
+    
+    // Update the text of the sizeBtn element with the text of the selected slAll element
+    if (selectedSlAll) {
+      sizeBtn.textContent = selectedSlAll.textContent;
+      sizeBtn.style.border = '1px solid red';
+    }
+  });
+
+
+
+  document.querySelector('.add_btn').addEventListener('click', function() {
+    // add_btn = button 을 (클릭 했을때, 동작한다) {}
+    const reviewComment = document.querySelector('.review_comment') // 변수생성
+    const reviewCommentList = document.querySelector('.review_comment_list') // 변수 생성
+    const asterionBtn = document.querySelector('.asterion_btn');// 방금 생성
+    const sizeBtn = document.querySelector('.size_btn');//방금 생성 
+    const checkedItem = document.querySelector('.fa-check-square');
+    const selectedSlAll = document.querySelector('.sl_all.selected');
+
+    if (!checkedItem || !selectedSlAll) {
+      alert('별점과 사이즈를 체크해주세요');
+      return;
+    }
+
+    let newP = document.createElement('p') // newP라는 변수를 만들면서 p 태그를 생성
+    let newText = document.createTextNode(reviewComment.value)
+    // subject input에서 들어오는 값을 TEXT로 받겠다.
+
+    let asterionText = document.createElement('span');
+    asterionText.textContent = asterionBtn.textContent;
+    let sizeText = document.createElement('span');
+    sizeText.textContent = sizeBtn.textContent;
+  
+    // Append the new elements to the newP element
+    newP.appendChild(asterionText);
+    newP.appendChild(sizeText);
+    
+    newP.appendChild(newText) 
+    document.body.appendChild(newP)
+
+    let newSpan = document.createElement('span')
+    let spanText = document.createTextNode('X')
+    
+    newSpan.appendChild(spanText)
+    newP.appendChild(newSpan)
+    newSpan.setAttribute('class', 'delete')
+
+        // Create new elements to display the current text content of asterionBtn and sizeBtn
+
+
+    reviewCommentList.insertBefore(newP, reviewCommentList.children[0])
+    // insertBefore = 전에 newP를 넣겠다. (추가되는 걸 맨위로)
+    // 추가 눌렀을때 텍스트가 제일 위로 올라온다고 생각하면됨.
+    // 최근 작성된것 바로 이전에 등록하겠다.
+    
+    // 서브젯리스트 중 첫번째 자식 before에다가 insert해라라는 의미.
+    // insertBefore(추가되는 노드, 기준 노드)
+    // X라는 스판버튼을 눌렀을때 부모,나자신 지워선 안되고
+    // 부모 위의 조상을 지워야한다.
+
+    reviewCommentList.appendChild(newP)
+    reviewComment.value = '' //  서브젯 벨류를 초기화 시킨다.
+    reviewComment.focus()
+    // 서브젯에 다시 포커스를 했을때 이전 적은것을 지우고 다시실행
+
+    let delBtn = document.querySelectorAll('.delete')
+
+    //★★ 중요함 ★★ 자주 사용되는 코드이다. ★★
+    for (let i=0; i<delBtn.length; i++) {
+      delBtn[i].addEventListener('click', function() {
+        if (delBtn[i].parentNode.parentNode) {
+          // 만약 부모의 부모가 존재한다면 
+          this.parentNode.parentNode.removeChild(this.parentNode)
+          // parentNode * 2번이면 subjectList를 삭제하는것
+          // 부모를 지울려면 부모의 부모까지 올라가야만 지울 수 있음.
+          // 이게 전제조건이다.
+          // 답변을 줘야한다면 만들 것을 또 생성 하면됨.
+
+          // 나자신.부모.부모.자식 삭제(나자신의 부모를 삭제하겠다.)
+        }
+      })
+    } 
+    function press(f) {
+      if(f.keyCode == 13) { //javascript에서는 13이 enter키를 의미함
+        formname.submit(); //formname에 사용자가 지정한 form의 name입력
+      }
+    }
+  
+    // Reset the text content of asterionBtn and sizeBtn to their default values
+    asterionBtn.innerHTML = '별점 <i class="fas fa-angle-down"></i>';
+    asterionBtn.style.fontSize = '';
+    asterionBtn.style.border = '';
+    asterionBtn.style.width = '60px';
+  
+    sizeBtn.innerHTML = '사이즈 <i class="fas fa-angle-down"></i>';
+    sizeBtn.style.fontSize = '';
+    sizeBtn.style.border = '';
+  
+    // The rest of your code here...
+  }) 
+
+
