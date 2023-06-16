@@ -463,6 +463,120 @@ for (var _i2 = 0; _i2 < tabList2.length; _i2++) {
     this.parentNode.classList.add('is_on');
   });
 }
+var itemsPerPage = 5;
+var totalPages = 5;
+function renderPagination(currentPage) {
+  var pagination = document.getElementById('js-pagination');
+  pagination.innerHTML = '';
+  for (var i = 1; i <= totalPages; i++) {
+    var p = document.createElement('p');
+    var a = document.createElement('a');
+    a.href = '#';
+    a.textContent = i;
+    if (i === currentPage) {
+      a.classList.add('active');
+    }
+    a.addEventListener('click', function (i) {
+      return function (event) {
+        event.preventDefault();
+        renderPage(i);
+        renderPagination(i);
+      };
+    }(i));
+    p.appendChild(a);
+    pagination.appendChild(p);
+  }
+}
+function renderPage(page) {
+  var start = (page - 1) * itemsPerPage;
+  var end = start + itemsPerPage;
+  var reviewCommentP = document.querySelectorAll('.review_comment_list > p');
+  for (var i = 0; i < reviewCommentP.length; i++) {
+    if (i >= start && i < end) {
+      reviewCommentP[i].style.display = 'flex';
+    } else {
+      reviewCommentP[i].style.display = 'none';
+    }
+  }
+}
+renderPage(1);
+renderOtherPagination(1);
+function renderOtherPagination(currentPage) {
+  var pagination = document.getElementById('js-pagination');
+  pagination.innerHTML = '';
+  var firstPage = 1;
+  var lastPage = totalPages;
+  var prevPage = currentPage - 1;
+  if (prevPage < firstPage) {
+    prevPage = firstPage;
+  }
+  var nextPage = currentPage + 1;
+  if (nextPage > lastPage) {
+    nextPage = lastPage;
+  }
+  var firstP = document.createElement('p');
+  var firstA = document.createElement('a');
+  firstA.href = '#';
+  firstA.innerHTML = '<i class="fas fa-angle-double-left"></i>';
+  firstA.addEventListener('click', function (event) {
+    event.preventDefault();
+    renderPage(firstPage);
+    renderOtherPagination(firstPage);
+  });
+  firstP.appendChild(firstA);
+  pagination.appendChild(firstP);
+  var prevP = document.createElement('p');
+  var prevA = document.createElement('a');
+  prevA.href = '#';
+  prevA.innerHTML = '<i class="fas fa-angle-left"></i>';
+  prevA.addEventListener('click', function (event) {
+    event.preventDefault();
+    renderPage(prevPage);
+    renderOtherPagination(prevPage);
+  });
+  prevP.appendChild(prevA);
+  pagination.appendChild(prevP);
+  for (var i = 1; i <= totalPages; i++) {
+    var p = document.createElement('p');
+    var a = document.createElement('a');
+    a.href = '#';
+    a.textContent = i;
+    if (i === currentPage) {
+      a.classList.add('active');
+    }
+    a.addEventListener('click', function (i) {
+      return function (event) {
+        event.preventDefault();
+        renderPage(i);
+        renderOtherPagination(i);
+      };
+    }(i));
+    p.appendChild(a);
+    pagination.appendChild(p);
+  }
+  var nextP = document.createElement('p');
+  var nextA = document.createElement('a');
+  nextA.href = '#';
+  nextA.innerHTML = '<i class="fas fa-angle-right"></i>';
+  nextA.addEventListener('click', function (event) {
+    event.preventDefault();
+    renderPage(nextPage);
+    renderOtherPagination(nextPage);
+  });
+  nextP.appendChild(nextA);
+  pagination.appendChild(nextP);
+  var lastP = document.createElement('p');
+  var lastA = document.createElement('a');
+  lastA.href = '#';
+  lastA.innerHTML = '<i class="fas fa-angle-double-right"></i>';
+  lastA.addEventListener('click', function (event) {
+    event.preventDefault();
+    renderPage(lastPage);
+    renderOtherPagination(lastPage);
+  });
+  lastP.appendChild(lastA);
+  pagination.appendChild(lastP);
+}
 var asterionBtn = document.querySelector('.asterion_btn');
 var asterionList = document.querySelector('.asterion_list');
 var sizeBtn = document.querySelector('.size_btn');
@@ -497,36 +611,43 @@ var asterionListtAll = document.querySelectorAll('.asterion_list p');
 var alEx = document.querySelector('.al_ex');
 asterionListtAll.forEach(function (asterionListtAlls) {
   asterionListtAlls.addEventListener('click', function () {
-    // Remove the fa-check-square class from any other elements that have it
-    asterionListtAll.forEach(function (el) {
-      var checkedIcon = el.querySelector('i.fa-check-square');
-      if (checkedIcon) {
-        checkedIcon.classList.replace('fa-check-square', 'fa-square');
-        el.style.color = '';
-      }
-    });
-
-    // Toggle the fa-check-square and fa-square classes on the clicked element
-    var icon = asterionListtAlls.querySelector('i.fa-square');
-    if (icon) {
-      icon.classList.replace('fa-square', 'fa-check-square');
-      asterionListtAlls.style.color = '#002053';
+    // Check if the clicked element has the fa-check-square class
+    var checkedIcon = asterionListtAlls.querySelector('i.fa-check-square');
+    if (checkedIcon) {
+      // If it does, remove it and add the fa-square class
+      checkedIcon.classList.replace('fa-check-square', 'fa-square');
+      asterionListtAlls.style.color = '';
     } else {
-      var checkedIcon = asterionListtAlls.querySelector('i.fa-check-square');
-      if (checkedIcon) {
-        checkedIcon.classList.replace('fa-check-square', 'fa-square');
-        asterionListtAlls.style.color = '';
+      // If it doesn't, remove the fa-check-square class from any other elements that have it
+      asterionListtAll.forEach(function (el) {
+        var checkedIcon = el.querySelector('i.fa-check-square');
+        if (checkedIcon) {
+          checkedIcon.classList.replace('fa-check-square', 'fa-square');
+          el.style.color = '';
+        }
+      });
+
+      // Add the fa-check-square class to the clicked element
+      var icon = asterionListtAlls.querySelector('i.fa-square');
+      if (icon) {
+        icon.classList.replace('fa-square', 'fa-check-square');
+        asterionListtAlls.style.color = '#002053';
       }
     }
   });
 });
 alEx.addEventListener('click', function () {
   var checkedItem = document.querySelector('.fa-check-square');
+  var checkedNone = document.querySelector('.fa-square');
+  if (checkedNone) {
+    /* asterionBtn.style.width = '60px'; */
+    asterionBtn.style.border = '1px solid #888';
+  }
   if (checkedItem) {
     var text = checkedItem.parentNode.textContent.trim();
     asterionBtn.textContent = text;
-    asterionBtn.style.fontSize = '14px';
-    asterionBtn.style.width = '90px';
+    asterionBtn.style.fontSize = '13px';
+    /* asterionBtn.style.width = '90px'; */
     asterionBtn.style.border = '1px solid red';
   } else {
     asterionBtn.innerHTML = '별점 <i class="fas fa-angle-down"></i>';
@@ -538,17 +659,25 @@ var slEx = document.querySelector('.sl_ex');
 var slAll = document.querySelectorAll('.sl_all');
 slAll.forEach(function (slAlls) {
   slAlls.addEventListener('click', function () {
-    // Reset all slAll elements to their default style and remove the 'selected' class
-    slAll.forEach(function (elem) {
-      elem.style.color = '';
-      elem.style.backgroundColor = '';
-      elem.classList.remove('selected');
-    });
+    // Check if the clicked element is already selected
+    if (slAlls.classList.contains('selected')) {
+      // If it is, reset its style and remove the 'selected' class
+      slAlls.style.color = '';
+      slAlls.style.backgroundColor = '';
+      slAlls.classList.remove('selected');
+    } else {
+      // If it's not, reset all slAll elements to their default style and remove the 'selected' class
+      slAll.forEach(function (elem) {
+        elem.style.color = '';
+        elem.style.backgroundColor = '';
+        elem.classList.remove('selected');
+      });
 
-    // Apply the new style to the clicked element and add the 'selected' class
-    slAlls.style.color = 'white';
-    slAlls.style.backgroundColor = '#002053';
-    slAlls.classList.add('selected');
+      // Apply the new style to the clicked element and add the 'selected' class
+      slAlls.style.color = 'white';
+      slAlls.style.backgroundColor = '#002053';
+      slAlls.classList.add('selected');
+    }
   });
 });
 slEx.addEventListener('click', function () {
@@ -561,6 +690,10 @@ slEx.addEventListener('click', function () {
   if (selectedSlAll) {
     sizeBtn.textContent = selectedSlAll.textContent;
     sizeBtn.style.border = '1px solid red';
+  } else {
+    // If no slAll element is selected, reset the text and border of the sizeBtn element
+    sizeBtn.innerHTML = '사이즈 <i class="fas fa-angle-down"></i>';
+    sizeBtn.style.border = '';
   }
 });
 document.querySelector('.add_btn').addEventListener('click', function () {
@@ -571,26 +704,58 @@ document.querySelector('.add_btn').addEventListener('click', function () {
   var sizeBtn = document.querySelector('.size_btn'); //방금 생성 
   var checkedItem = document.querySelector('.fa-check-square');
   var selectedSlAll = document.querySelector('.sl_all.selected');
-  if (!checkedItem || !selectedSlAll) {
-    alert('별점과 사이즈를 체크해주세요');
+  var userName = document.querySelector('.use_name');
+  var reviewNone = document.querySelector('.review_none');
+  if (userName.value.length <= 0 || !checkedItem || !selectedSlAll) {
+    alert('이름, 점수, 사이즈를 입력해주세요');
     return;
   }
+
+  // ... your existing code to add a new p element ...
+
+  // Get the current page number from the active pagination link
+  var currentPage = parseInt(document.querySelector('#js-pagination .active').textContent);
+
+  // Count the number of p elements
+  var pCount = document.querySelectorAll('.review_comment_list > p').length;
+
+  // Check if the number of p elements exceeds itemsPerPage
+  if (pCount > currentPage * itemsPerPage) {
+    // Move to the next page
+    var nextPage = currentPage + 1;
+    renderPage(nextPage);
+    renderOtherPagination(nextPage);
+  }
   var newP = document.createElement('p'); // newP라는 변수를 만들면서 p 태그를 생성
-  var newText = document.createTextNode(reviewComment.value);
+  var newText = document.createElement('span');
+  newText.setAttribute('class', 'detail');
+  newText.textContent = reviewComment.value;
   // subject input에서 들어오는 값을 TEXT로 받겠다.
 
+  var userNameText = document.createElement('span');
+  userNameText.textContent = userName.value;
+  // 이름 / 클래스 추가 / 벨류와 동일 시
   var asterionText = document.createElement('span');
   asterionText.textContent = asterionBtn.textContent;
+  // 별점 / 클래스 추가 / 별점 임의의 이름 = 사이즈 텍스트 
   var sizeText = document.createElement('span');
   sizeText.textContent = sizeBtn.textContent;
+  // 사이즈 / 클래스 추가 / 사이즈 임의의 이름 = 사이즈 텍스트 
+  var timeElement = document.createElement('span');
+  timeElement.setAttribute('class', 'time');
+  timeElement.textContent = new Date().toLocaleString();
 
   // Append the new elements to the newP element
+  newP.appendChild(timeElement);
+  newP.appendChild(userNameText);
   newP.appendChild(asterionText);
   newP.appendChild(sizeText);
+  // newP 부모 아래에 임의로 만든 sizeText 추가
+
   newP.appendChild(newText);
   document.body.appendChild(newP);
   var newSpan = document.createElement('span');
-  var spanText = document.createTextNode('X');
+  var spanText = document.createTextNode('삭제');
   newSpan.appendChild(spanText);
   newP.appendChild(newSpan);
   newSpan.setAttribute('class', 'delete');
@@ -613,6 +778,9 @@ document.querySelector('.add_btn').addEventListener('click', function () {
   // 서브젯에 다시 포커스를 했을때 이전 적은것을 지우고 다시실행
 
   var delBtn = document.querySelectorAll('.delete');
+  if (reviewCommentList.children.length > 1) {
+    reviewNone.style.display = 'none';
+  }
 
   //★★ 중요함 ★★ 자주 사용되는 코드이다. ★★
   var _loop2 = function _loop2(_i3) {
@@ -626,6 +794,10 @@ document.querySelector('.add_btn').addEventListener('click', function () {
         // 답변을 줘야한다면 만들 것을 또 생성 하면됨.
 
         // 나자신.부모.부모.자식 삭제(나자신의 부모를 삭제하겠다.)
+
+        if (reviewCommentList.children.length <= 1) {
+          reviewNone.style.display = 'block';
+        }
       }
     });
   };
@@ -643,14 +815,29 @@ document.querySelector('.add_btn').addEventListener('click', function () {
   asterionBtn.innerHTML = '별점 <i class="fas fa-angle-down"></i>';
   asterionBtn.style.fontSize = '';
   asterionBtn.style.border = '';
-  asterionBtn.style.width = '60px';
+  /* asterionBtn.style.width = '60px'; */
+
   sizeBtn.innerHTML = '사이즈 <i class="fas fa-angle-down"></i>';
   sizeBtn.style.fontSize = '';
   sizeBtn.style.border = '';
+  slAll.forEach(function (slAlls) {
+    slAlls.style.color = '';
+    slAlls.style.backgroundColor = '';
+    slAlls.classList.remove('selected');
+  });
+  asterionListtAll.forEach(function (asterionListtAlls) {
+    var checkedIcon = asterionListtAlls.querySelector('i.fa-check-square');
+    if (checkedIcon) {
+      // If it does, remove it and add the fa-square class
+      checkedIcon.classList.replace('fa-check-square', 'fa-square');
+      asterionListtAlls.style.color = '';
+    }
+  });
+  userName.value = '';
 
   // The rest of your code here...
 });
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -675,7 +862,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55556" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56815" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
@@ -819,5 +1006,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","디테일페이지/js/detail.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","디테일페이지/js/detail.js"], null)
 //# sourceMappingURL=/detail.a2e65d35.js.map

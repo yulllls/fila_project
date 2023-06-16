@@ -1396,7 +1396,7 @@ header {
   display: block;
   /* padding-top: 280px; */
   width: 1420px;
-  height: 1100px;
+  height: 1200px;
   margin: 0 auto;
 
   .tab_menu2 {
@@ -1461,11 +1461,8 @@ header {
           margin-top: 30px;
           width: 1420px;
           height: 1000px;
-          background-color: #eee;
+          /* background-color: #eee; */
           transform: translateX(-50%);
-
-
-
 
         }
 
@@ -1651,12 +1648,29 @@ header {
 
 
                   .progress {
-                    width: 72%; // 나타내고자 하는 퍼센트 값을 넣으면 됩니다.
+                     // 나타내고자 하는 퍼센트 값을 넣으면 됩니다.
                     height: 30px;
                     padding: 0;
                     text-align: center;
                     background-color: #002053;
                     color: #111;
+                  }
+
+                  .progress1{
+                    width: 82%;
+                  }
+
+                  .progress2{
+                    width: 70%;
+                  }
+                  .progress3{
+                    width: 50%;
+                  }
+                  .progress4{
+                    width: 30%;
+                  }
+                  .progress5{
+                    width: 10%;
                   }
                 }
 
@@ -1742,29 +1756,59 @@ header {
       .comment {
         position: relative;
         display: flex;
+        margin-top: 20px;
+
+
+        .use_name {
+          position: relative;
+          width: 153px;
+          height: 50px;
+          padding-left: 35px;
+          box-sizing: border-box;
+          margin-left: 45px;
+          border-radius: 5px;
+          border: 0;
+          outline: none;
+          border: 1px solid #888;
+        }
+
+        .fa-user {
+          position: absolute;
+          top: 16px;
+          left: 54px;      
+          font-size: 20px;
+        }
 
         .asterion_btn {
-          width: 60px;
+          width: 70px;
           height: 40px;
           background-color: white;
           border: 1px solid #888;
-          margin-left: 80px;
+          margin-left: -154px;
           line-height: 40px;
           border-radius: 5px;
           font-size: 14px;
           cursor: pointer;
-          margin-top: 30px;
+          margin-top: 60px;
+          transition: 0.3s;
         }
 
+/*         .asterion_btn:hover{
+          color: white;
+          background-color: #002053;
+        }
+ */
         .asterion_list {
           position: absolute;
-          top: 50px;
-          left: 80px;
+          top: 115px;
+          left: 44px;
           width: 350px;
           height: 350px;
           padding-top: 20px;
           border: 1px solid #888;
+          background: white;
           border-radius: 10px;
+          z-index: 10;
 
           .al_all {
             margin-left: 25px;
@@ -1878,13 +1922,19 @@ header {
           border-radius: 5px;
           font-size: 14px;
           cursor: pointer;
-          margin-top: 30px;
+          margin-top: 60px;
+          transition: 0.3s;
         }
+
+       /*  .size_btn:hover{
+          color: white;
+          background-color: #002053;
+        } */
 
         .size_list_chk {
           position: absolute;
-          top: 50px;
-          left: 151px;
+          top: 114px;
+          left: 126px;
           width: 338px;
           height: 210px;
           padding-top: 20px;
@@ -1892,6 +1942,8 @@ header {
           border-radius: 10px;
           overflow: hidden;
           padding-left: 10px;
+          background-color: white;
+          z-index: 10;
 
           .sl_all {
             float: left;
@@ -1907,6 +1959,13 @@ header {
             color: black;
             background-color: white;
             cursor: pointer;
+            transition: 0.3s;
+          }
+
+          .sl_all:hover{
+            background-color: #002053;
+            color: white;
+
           }
 
           .sl_ex {
@@ -1933,33 +1992,161 @@ header {
         }
 
         .review_comment {
-          width: 1000px;
-          height: 100px;
+          width: 1140px;
+          height: 103px;
           margin-left: 20px;
+          box-sizing: border-box;
+          padding-left: 30px;
+          border-radius: 5px;
+          border: 0;
+          outline: none;
+          border: 1px solid #888;
         }
 
         .add_btn {
           width: 75px;
           height: 50px;
           border-radius: 5px;
-          margin-left: 10px;
+          margin-left: -110px;
+          border: 0;
+          outline: none;
+          border: 1px solid #888;
+          cursor: pointer;
+          transition: 0.5s;
         }
 
+        .add_btn:hover{
+          background-color: #002053;
+          color: white;
+        }
 
       }
-      .review_comment_list{
-        width: 1175px;
-        margin-left: 75px;
+
+      .review_h3 {
+        text-align: center;
+        margin-top: 30px;
+      }
+      
+      .review_list{
+        width: 1330px;
+        height: 30px;
+        background-color: #eee;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 30px;
+        font-size: 14px;
+        position: relative;
+
+        p{
+          width: 90px;
+          line-height: 30px;
+          box-sizing: border-box;
+        
+        }
+
+        .review_line{
+          width: 1px;
+          height: 10px;
+          background-color: #bfbfbf;
+          margin-top: 10px;
+        }
+
+        .review_time{
+          width: 100px;
+        }
+
+        .review_detail{
+          width: 890px;
+        }
+
+        .review_delete{
+          width: 70px;
+        }
+        
+      }
+
+      .review_comment_list {
+        width: 1330px;
+        margin: 0 auto;
         background-color: white;
         margin-top: 20px;
         text-align: left;
 
-        p{
-          span{
-            margin-right: 20px;
+        .review_none{
+          text-align: center;
+          margin-top: 100px;
+          color: #888;
+        }
+
+        p {
+          display: flex;
+          margin-bottom: 10px;
+          align-items: center;
+          border-bottom: 1px solid #888;
+          font-size: 14px;
+
+          span {
+            display: block;
+            width: 90px;
+            text-align: center;
+            /* border-right: 1px solid #888; */
+            box-sizing: border-box;
+            /* border-bottom: 1px solid #888; */
+            padding: 5px;
+          }
+
+          .detail{
+            width: 890px;
+          /* border-right: 1px solid #888 ;
+            border-left: 1px solid #888 ; */
+          }
+          .delete{
+            width: 70px;
+            border-right: none;
+            cursor: pointer;
+          }
+          .time{
+            font-size: 14px;
+            width: 100px;
           }
         }
       }
+
+      #js-pagination {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 50px;
+      
+      
+        p {
+          margin: 0 5px;
+          font-size: 20px;
+          
+      
+          a {
+            display: block;
+            border: 1px solid #ddd;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            text-align: center;
+            height: 40px;
+            width: 35px;
+            line-height: 40px;
+          }
+        }
+      
+        .active {
+          color: #333;
+          background-color: #ddd;
+        }
+      }
+      
+      #js-pagination a:hover {
+        background-color: #ddd;
+      }
+      
 
     }
 
@@ -1970,11 +2157,11 @@ header {
 }
 
 
-
 .footer {
   width: 100%;
   height: 430px;
   background-color: #f0f0f0;
+  margin-top: 30px;
 
   .footer_up {
     padding-top: 50px;

@@ -582,8 +582,8 @@ let genderDivClick = false;
 let genderAllDivClick = false;
 
 
-var itemsPerPage = 20;
-var totalPages = 5;
+let itemsPerPage = 20;
+let totalPages = 5;
 
 function renderPagination(currentPage) {
     var pagination = document.getElementById('js-pagination');
