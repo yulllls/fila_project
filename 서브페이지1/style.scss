@@ -1508,3 +1508,112 @@ header {
   }
 
 }
+
+.wing_banner {
+  width: 80px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  right: -49px;
+  transform: translateY(-50%);
+  border: 1px solid #888;
+  box-sizing: border-box;
+  z-index: 9999;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+  display: flex;
+
+
+  .wing_left{
+    width: 30px;
+    height: 50px;
+
+    .fa-angle-double-left{
+      font-size: 30px;
+      margin-top: 20px;
+    }
+
+    p{
+      text-align: center;
+      margin-top: 15px;
+      line-height: 25px;
+    }
+  }
+
+  .wing_right{
+      width: 50px;
+      border-left: 1px solid #888;
+    div {
+      width: 49px;
+      height: 50px;
+      border-bottom: 1px solid #888;
+      box-sizing: border-box;
+      position: relative;
+  
+  
+      img {
+        width: 50px;
+        height: 50px;
+      }
+  
+  
+      .fas {
+        
+        position: absolute;
+        cursor: pointer;
+        transition: 0.3s;
+        color: #888;
+      }
+  
+      .fa-home{
+        font-size:38px;
+        top: 7px;
+        left: 3px;
+        
+      }
+
+      .fa-store{
+        font-size: 32px;
+        top: 10px;
+        left: 5px;
+      }
+
+      .fa-shopping-basket{
+        font-size: 35px;
+        top: 7px;
+        left: 5px;
+      }
+
+      .fa-user{
+        font-size: 40px;
+        top: 5px;
+        left: 7px;
+        
+      }
+
+      .fa-caret-up {
+        font-size: 60px;
+        top: -9px;
+        left: 5px;
+
+      }
+  
+      .fa-caret-down {
+        font-size: 60px;
+        top: -7px;
+        left: 5px;
+     
+      }
+    }
+    
+    .down {
+      border: none;
+    }
+  
+  .fas:hover{
+    color: red;
+  }
+  }
+
+}

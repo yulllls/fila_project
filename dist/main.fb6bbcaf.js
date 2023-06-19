@@ -660,8 +660,6 @@ pointMenu3_2.addEventListener('mouseleave', function () {
   }, 1000);
 });
 var wingBanner = document.querySelector('.wing_banner');
-var up = document.querySelector('.fa-caret-up');
-var down = document.querySelector('.fa-caret-down');
 $('.up').on('click', function () {
   $('html, body').animate({
     scrollTop: 0
@@ -705,7 +703,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63488" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54618" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

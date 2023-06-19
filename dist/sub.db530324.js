@@ -284,6 +284,46 @@ var shopBoxData = [{
   genderAll: "공용 컴포트핏 라이프스타일",
   shopName: "레코드 그래픽 티셔츠",
   shopPrice: "59,000원"
+}, {
+  id: "shoplist21",
+  src: "../img/images/21.컴포트핏 인터내셔널 우븐 후드티.jpg",
+  imgHidden: "../img/images/21-1.컴포트핏 인터내셔널 우븐 후드티.jpg",
+  imgHidden2: "../img/images/21-2.컴포트핏 인터내셔널 우븐 후드티.jpg",
+  genderAll: "공용 라이프스타일",
+  shopName: "컴포트핏 인터내셔널 우븐 후드티",
+  shopPrice: "119,000원"
+}, {
+  id: "shoplist22",
+  src: "../img/images/22.레터링 그래픽 티셔츠.jpg",
+  imgHidden: "../img/images/22-1.레터링 그래픽 티셔츠.jpg",
+  imgHidden2: "../img/images/22-2.레터링 그래픽 티셔츠.jpg",
+  genderAll: "공용 컴포트핏 라이프스타일",
+  shopName: "레터링 그래픽 티셔츠",
+  shopPrice: "49,000원"
+}, {
+  id: "shoplist23",
+  src: "../img/images/23.컴포트핏 인터내셔널 우븐 후드티.jpg",
+  imgHidden: "../img/images/23-1.컴포트핏 인터내셔널 우븐 후드티.jpg",
+  imgHidden2: "../img/images/23-2.컴포트핏 인터내셔널 우븐 후드티.jpg",
+  genderAll: "공용 라이프스타일",
+  shopName: "컴포트핏 인터내셔널 우븐 후드티",
+  shopPrice: "119,000원"
+}, {
+  id: "shoplist24",
+  src: "../img/images/24.플래그 반팔티.jpg",
+  imgHidden: "../img/images/24-1.플래그 반팔티.jpg",
+  imgHidden2: "../img/images/24-2.플래그 반팔티.jpg",
+  genderAll: "공용 컴포트핏 라이프스타일",
+  shopName: "플래그 반팔티",
+  shopPrice: "39,000원"
+}, {
+  id: "shoplist25",
+  src: "../img/images/25.테니스 퍼포먼스 배색 카라티셔츠.jpg",
+  imgHidden: "../img/images/25-1.테니스 퍼포먼스 배색 카라티셔츠.jpg",
+  imgHidden2: "../img/images/25-2.테니스 퍼포먼스 배색 카라티셔츠.jpg",
+  gender: "남성 레귤러핏 테니스 지속가능소재",
+  shopName: "테니스 퍼포먼스 배색 카라티셔츠",
+  shopPrice: "99,000원"
 }];
 var _default = shopBoxData;
 exports.default = _default;
@@ -858,6 +898,25 @@ function renderOtherPagination(currentPage) {
   lastLi.appendChild(lastA);
   pagination.appendChild(lastLi);
 }
+var wingBanner = document.querySelector('.wing_banner');
+$('.up').on('click', function () {
+  $('html, body').animate({
+    scrollTop: 0
+  }, 500);
+  return false;
+});
+$('.down').on('click', function () {
+  $('html, body').animate({
+    scrollTop: 6000
+  }, 500);
+  return false;
+});
+wingBanner.addEventListener('mouseover', function () {
+  wingBanner.style.right = '0px';
+});
+wingBanner.addEventListener('mouseout', function () {
+  wingBanner.style.right = '-49px';
+});
 },{"./data.js":"서브페이지1/js/data.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -883,7 +942,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63488" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54618" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

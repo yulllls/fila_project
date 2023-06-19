@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html",
-    "sass": "node-sass ./디테일페이지/style.scss ./디테일페이지/style.css"
+    "sass": "node-sass ./style.scss ./style.css"
   },
   "keywords": [],
   "author": "",

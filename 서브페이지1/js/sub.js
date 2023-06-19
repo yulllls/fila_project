@@ -711,3 +711,33 @@ function renderOtherPagination(currentPage) {
   lastLi.appendChild(lastA);
   pagination.appendChild(lastLi);
 }
+
+
+const wingBanner = document.querySelector('.wing_banner')
+
+$('.up').on('click', function () {
+  $('html, body').animate({
+    scrollTop: 0
+  }, 500);
+  return false;
+})
+
+$('.down').on('click', function () {
+  $('html, body').animate({
+    scrollTop: 6000
+  }, 500);
+  return false;
+})
+
+
+wingBanner.addEventListener('mouseover' , () => {
+  
+  wingBanner.style.right = '0px'
+
+})
+wingBanner.addEventListener('mouseout' , () => {
+  
+  wingBanner.style.right = '-49px'
+
+})
+

@@ -751,9 +751,6 @@ pointMenu3_2.addEventListener('mouseleave', () => {
 
 const wingBanner = document.querySelector('.wing_banner')
 
-const up = document.querySelector('.fa-caret-up')
-const down = document.querySelector('.fa-caret-down')
-
 $('.up').on('click', function () {
   $('html, body').animate({
     scrollTop: 0

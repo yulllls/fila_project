@@ -1823,7 +1823,7 @@ main {
 
 .wing_banner {
   width: 80px;
-  height: 450px;
+  height: 300px;
   position: fixed;
   top: 50%;
   right: -49px;
@@ -1871,20 +1871,51 @@ main {
   
   
       .fas {
-        font-size: 60px;
+        
         position: absolute;
+        cursor: pointer;
+        transition: 0.3s;
+        color: #888;
       }
   
+      .fa-home{
+        font-size:38px;
+        top: 7px;
+        left: 3px;
+        
+      }
+
+      .fa-store{
+        font-size: 32px;
+        top: 10px;
+        left: 5px;
+      }
+
+      .fa-shopping-basket{
+        font-size: 35px;
+        top: 7px;
+        left: 5px;
+      }
+
+      .fa-user{
+        font-size: 40px;
+        top: 5px;
+        left: 7px;
+        
+      }
+
       .fa-caret-up {
+        font-size: 60px;
         top: -9px;
         left: 5px;
-        transition: 0.3s;
+
       }
   
       .fa-caret-down {
+        font-size: 60px;
         top: -7px;
         left: 5px;
-        transition: 0.3s;
+     
       }
     }
     
@@ -1892,12 +1923,9 @@ main {
       border: none;
     }
   
-    .fa-caret-up:hover{
-      color: #002053;
-    }
-    .fa-caret-down:hover{
-      color: #002053;
-    }
+  .fas:hover{
+    color: red;
+  }
   }
 
 }
