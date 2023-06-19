@@ -385,7 +385,7 @@ function RankSwiper2() {
 
 RankSwiper2();
 
-const bullet3 = ['1. 레이플라이드', '2. 레이플라이드', '3. 레이플라이드v2', '4. 레이플라이드v2', '5. 레이플라이드v3', '6. 레이플라이드v5', '7. 헤리티지 크롭 브이넥 스웨터 베스트', '8. 레이플라이드v6'];
+const bullet3 = ['1. 헤리티지 크롭 브이넥 스웨터 베스트', '2. 헤리티지 더블와펜 맨투맨', '3. 테니스 뉴헤리티지 집업', '4. 테니스 뉴헤리티지 반바지', '5. 헤리티지 모노그램 크롭 자켓', '6. 헤리티지 코튼 팬츠', '7. 헤리티지 크롭 맨투맨', '8. 헤리티지 브이넥 맨투맨'];
 
 function RankSwiper3() {
 
@@ -412,7 +412,7 @@ function RankSwiper3() {
       el: ".rank_swiper3 .swiper-pagination",
       clickable: true,
       renderBullet: function (index, className) {
-        return '<div class="' + className + '"><span>' + (bullet2[index]) + '</span></div>';
+        return '<div class="' + className + '"><span>' + (bullet3[index]) + '</span></div>';
       }
     },
 
@@ -485,6 +485,36 @@ function arrivalSwiper() {
 arrivalSwiper();
 
 
+function arrivalSwiper2() {
+
+  let swiper = new Swiper('.arrival_swiper2', {
+    // Optional parameters
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.arrival_swiper2 .swiper-button-next',
+      prevEl: '.arrival_swiper2 .swiper-button-prev',
+    },
+
+
+    slidesPerView: 3,
+    spaceBetween: 30,
+    //사이간 여백
+
+    centeredSlides: true,
+
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+  });
+
+}
+
+arrivalSwiper2();
 
 
 function arrivalSwiper3() {
@@ -495,8 +525,8 @@ function arrivalSwiper3() {
 
     // Navigation arrows
     navigation: {
-      nextEl: '.arrival_swiper .swiper-button-next',
-      prevEl: '.arrival_swiper .swiper-button-prev',
+      nextEl: '.arrival_swiper3 .swiper-button-next',
+      prevEl: '.arrival_swiper3 .swiper-button-prev',
     },
 
 
@@ -513,10 +543,10 @@ function arrivalSwiper3() {
     },
 
 
-    /*      autoplay: {
+         autoplay: {
           delay: 3000,
           disableOnInteraction: false,
-        }, */
+        },
 
   });
 
