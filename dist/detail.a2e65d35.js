@@ -281,67 +281,26 @@ lnbMenuBk.addEventListener('mouseover', function () {
 });
 var header = document.querySelector(".header");
 var prevScrollpos = window.pageYOffset;
+var lnbAll = document.querySelector('.header_main').querySelectorAll('.lnb .lnb_list ul li');
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     header.classList.add("fixed");
     header.style.top = "0px";
-    if (currentScrollPos == 0) {
-      header.style.backgroundColor = 'transparent';
-    } else {
-      header.style.backgroundColor = 'rgba(0, 0, 0, 0.466)';
+    for (var i = 0; i < lnbAll.length; i++) {
+      if (currentScrollPos == 0) {
+        header.style.backgroundColor = 'transparent';
+        lnbAll[i].style.color = 'black';
+      } else {
+        header.style.backgroundColor = 'rgba(0, 0, 0, 0.466)';
+        lnbAll[i].style.color = 'white';
+      }
     }
   } else {
-    /* header.classList.remove("fixed"); */
     header.style.top = "-100px";
   }
   prevScrollpos = currentScrollPos;
 };
-
-/* let number = 1;
-
-const incrementButton = document.querySelector(".plus_btn");
-const decrementButton = document.querySelector(".minus_btn");
-const display = document.querySelector(".number");
-
-incrementButton.addEventListener("click", () => {
-  if (number < 9) {
-    number++;
-    display.textContent = number;
-  }
-});
-
-decrementButton.addEventListener("click", () => {
-  if (number > 1) {
-    number--;
-    display.textContent = number;
-  }
-}); */
-
-/* let number = 1;
-let price = 49000;
-
-const incrementButton = document.querySelector(".plus_btn");
-const decrementButton = document.querySelector(".minus_btn");
-const display = document.querySelector(".number");
-const totalDisplay = document.querySelector(".gold");
-
-incrementButton.addEventListener("click", () => {
-  if (number < 9) {
-    number++;
-    display.textContent = number;
-    totalDisplay.textContent = `${number * price}원`;
-  }
-});
-
-decrementButton.addEventListener("click", () => {
-  if (number > 1) {
-    number--;
-    display.textContent = number;
-    totalDisplay.textContent = `${number * price}원`;
-  }
-}); */
-
 var number = 1;
 var price = 49000;
 var incrementButton = document.querySelector(".plus_btn");
@@ -365,55 +324,6 @@ decrementButton.addEventListener("click", function () {
 function formatPrice(price) {
   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
-/* const choice = document.querySelectorAll('.choice')
-const mainImg = document.querySelector('.main_img') */
-
-/* choice.addEventListener('click' , () => {
-
-  for(let i = 0; i < choice.length; i++) {
-   
-    
-    
-  }
-}) */
-
-/* for(let i = 0; i < choice.length; i++) {
-  choice[i].addEventListener('click' , () => {
-    mainImg.src = choice[i].src;
-  })
-} */
-
-/* let timer;
-
-for(let i = 0; i < choice.length; i++) {
-  choice[i].addEventListener('click' , () => {
-    mainImg.src = choice[i].src;
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      mainImg.src = '../img/03. 디테일/인터내셔널 그래픽 반팔티1.jpg';
-    }, 4000);
-  })
-}
-
-
-
-const images = [
-  '../img/03. 디테일/인터내셔널 그래픽 반팔티1.jpg',
-  '../img/03. 디테일/모델컷1.jpg',
-  '../img/03. 디테일/모델컷2.jpg',
-  '../img/03. 디테일/모델컷3.jpg',
-  '../img/03. 디테일/모델컷4.jpg'
-];
-let index = 0;
-
-function changeImage() {
-  mainImg.src = images[index];
-  index = (index + 1) % images.length;
-}
-
-setInterval(changeImage, 1000); */
-
 var mainImg = document.querySelector('.main_img');
 var images = ['../img/03. 디테일/모델컷1.jpg', '../img/03. 디테일/모델컷2.jpg', '../img/03. 디테일/모델컷3.jpg', '../img/03. 디테일/인터내셔널 그래픽 반팔티1.jpg', '../img/03. 디테일/모델컷4.jpg'];
 var index = 0;
@@ -710,22 +620,6 @@ document.querySelector('.add_btn').addEventListener('click', function () {
     alert('이름, 점수, 사이즈를 입력해주세요');
     return;
   }
-
-  // ... your existing code to add a new p element ...
-
-  // Get the current page number from the active pagination link
-  var currentPage = parseInt(document.querySelector('#js-pagination .active').textContent);
-
-  // Count the number of p elements
-  var pCount = document.querySelectorAll('.review_comment_list > p').length;
-
-  // Check if the number of p elements exceeds itemsPerPage
-  if (pCount > currentPage * itemsPerPage) {
-    // Move to the next page
-    var nextPage = currentPage + 1;
-    renderPage(nextPage);
-    renderOtherPagination(nextPage);
-  }
   var newP = document.createElement('p'); // newP라는 변수를 만들면서 p 태그를 생성
   var newText = document.createElement('span');
   newText.setAttribute('class', 'detail');
@@ -777,6 +671,22 @@ document.querySelector('.add_btn').addEventListener('click', function () {
   reviewComment.focus();
   // 서브젯에 다시 포커스를 했을때 이전 적은것을 지우고 다시실행
 
+  // Get the current page number from the active pagination link
+  var currentPage = parseInt(document.querySelector('#js-pagination .active').textContent);
+
+  // Count the number of p elements
+  var pCount = document.querySelectorAll('.review_comment_list > p').length;
+
+  // Check if the number of p elements exceeds itemsPerPage
+  if (pCount > currentPage * itemsPerPage) {
+    // Move to the next page
+    var nextPage = currentPage + 1;
+    renderPage(nextPage);
+    renderOtherPagination(nextPage);
+  }
+
+  // ... rest of your code ...
+
   var delBtn = document.querySelectorAll('.delete');
   if (reviewCommentList.children.length > 1) {
     reviewNone.style.display = 'none';
@@ -803,12 +713,6 @@ document.querySelector('.add_btn').addEventListener('click', function () {
   };
   for (var _i3 = 0; _i3 < delBtn.length; _i3++) {
     _loop2(_i3);
-  }
-  function press(f) {
-    if (f.keyCode == 13) {
-      //javascript에서는 13이 enter키를 의미함
-      formname.submit(); //formname에 사용자가 지정한 form의 name입력
-    }
   }
 
   // Reset the text content of asterionBtn and sizeBtn to their default values
@@ -837,6 +741,278 @@ document.querySelector('.add_btn').addEventListener('click', function () {
 
   // The rest of your code here...
 });
+
+var reviewComment = document.querySelector('.review_comment');
+var button = document.querySelector('.add_btn');
+reviewComment.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    button.click();
+  }
+});
+var inquirylist1 = document.querySelector('.ilist1 .fa-reply');
+var inquiryAdmin1 = document.querySelector('.ilist1 .inquiry_admin');
+inquiryAdmin1.style.display = 'none';
+var inquirylist1click = false;
+inquirylist1.addEventListener('click', function () {
+  if (inquirylist1click) {
+    inquiryAdmin1.style.display = 'none';
+    inquirylist1click = false;
+  } else {
+    inquiryAdmin1.style.display = 'flex';
+    inquirylist1click = true;
+  }
+});
+function renderPagination2() {
+  var itemsPerPage = 5;
+  var totalPages = 5;
+  function renderPagination(currentPage) {
+    var pagination = document.getElementById('js-pagination2');
+    pagination.innerHTML = '';
+    for (var i = 1; i <= totalPages; i++) {
+      var p = document.createElement('p');
+      var a = document.createElement('a');
+      a.href = '#';
+      a.textContent = i;
+      if (i === currentPage) {
+        a.classList.add('active');
+      }
+      a.addEventListener('click', function (i) {
+        return function (event) {
+          event.preventDefault();
+          renderPage(i);
+          renderPagination(i);
+        };
+      }(i));
+      p.appendChild(a);
+      pagination.appendChild(p);
+    }
+  }
+  function renderPage(page) {
+    var start = (page - 1) * itemsPerPage;
+    var end = start + itemsPerPage;
+    var reviewCommentP = document.querySelectorAll('.ilist');
+    for (var i = 0; i < reviewCommentP.length; i++) {
+      if (i >= start && i < end) {
+        reviewCommentP[i].style.display = 'flex';
+      } else {
+        reviewCommentP[i].style.display = 'none';
+      }
+    }
+  }
+  renderPage(1);
+  renderOtherPagination(1);
+  function renderOtherPagination(currentPage) {
+    var pagination = document.getElementById('js-pagination2');
+    pagination.innerHTML = '';
+    var firstPage = 1;
+    var lastPage = totalPages;
+    var prevPage = currentPage - 1;
+    if (prevPage < firstPage) {
+      prevPage = firstPage;
+    }
+    var nextPage = currentPage + 1;
+    if (nextPage > lastPage) {
+      nextPage = lastPage;
+    }
+    var firstP = document.createElement('p');
+    var firstA = document.createElement('a');
+    firstA.href = '#';
+    firstA.innerHTML = '<i class="fas fa-angle-double-left"></i>';
+    firstA.addEventListener('click', function (event) {
+      event.preventDefault();
+      renderPage(firstPage);
+      renderOtherPagination(firstPage);
+    });
+    firstP.appendChild(firstA);
+    pagination.appendChild(firstP);
+    var prevP = document.createElement('p');
+    var prevA = document.createElement('a');
+    prevA.href = '#';
+    prevA.innerHTML = '<i class="fas fa-angle-left"></i>';
+    prevA.addEventListener('click', function (event) {
+      event.preventDefault();
+      renderPage(prevPage);
+      renderOtherPagination(prevPage);
+    });
+    prevP.appendChild(prevA);
+    pagination.appendChild(prevP);
+    for (var i = 1; i <= totalPages; i++) {
+      var p = document.createElement('p');
+      var a = document.createElement('a');
+      a.href = '#';
+      a.textContent = i;
+      if (i === currentPage) {
+        a.classList.add('active');
+      }
+      a.addEventListener('click', function (i) {
+        return function (event) {
+          event.preventDefault();
+          renderPage(i);
+          renderOtherPagination(i);
+        };
+      }(i));
+      p.appendChild(a);
+      pagination.appendChild(p);
+    }
+    var nextP = document.createElement('p');
+    var nextA = document.createElement('a');
+    nextA.href = '#';
+    nextA.innerHTML = '<i class="fas fa-angle-right"></i>';
+    nextA.addEventListener('click', function (event) {
+      event.preventDefault();
+      renderPage(nextPage);
+      renderOtherPagination(nextPage);
+    });
+    nextP.appendChild(nextA);
+    pagination.appendChild(nextP);
+    var lastP = document.createElement('p');
+    var lastA = document.createElement('a');
+    lastA.href = '#';
+    lastA.innerHTML = '<i class="fas fa-angle-double-right"></i>';
+    lastA.addEventListener('click', function (event) {
+      event.preventDefault();
+      renderPage(lastPage);
+      renderOtherPagination(lastPage);
+    });
+    lastP.appendChild(lastA);
+    pagination.appendChild(lastP);
+  }
+}
+renderPagination2();
+document.querySelector('.inquiry_btn').addEventListener('click', function () {
+  // add_btn = button 을 (클릭 했을때, 동작한다) {}
+  var listComment = document.querySelector('.list_comment'); // 변수생성
+  var inquiryCommentList = document.querySelector('.inquiry_comment_list'); // 변수 생성
+
+  /*  if (userName.value.length <= 0 || !checkedItem || !selectedSlAll) {
+     alert('이름, 점수, 사이즈를 입력해주세요');
+     return;
+   } */
+
+  var newP = document.createElement('p'); // newP라는 변수를 만들면서 p 태그를 생성
+  var newText = document.createElement('span');
+  newText.setAttribute('class', 'detail');
+  newText.textContent = listComment.value;
+  // subject input에서 들어오는 값을 TEXT로 받겠다.
+
+  var timeElement = document.createElement('span');
+  timeElement.setAttribute('class', 'time');
+  timeElement.textContent = new Date().toLocaleString();
+  var admin = document.createElement('span');
+  admin.setAttribute('class', 'admin');
+  admin.textContent = '문의답변';
+
+  // Append the new elements to the newP element
+  newP.appendChild(timeElement);
+  newP.appendChild(admin);
+
+  // newP 부모 아래에 임의로 만든 sizeText 추가
+
+  newP.appendChild(newText);
+  document.body.appendChild(newP);
+  var newSpan = document.createElement('span');
+  var spanText = document.createTextNode('삭제');
+  newSpan.appendChild(spanText);
+  newP.appendChild(newSpan);
+  newSpan.setAttribute('class', 'delete');
+
+  // Create new elements to display the current text content of asterionBtn and sizeBtn
+
+  inquiryCommentList.insertBefore(newP, inquiryCommentList.children[0]);
+  // insertBefore = 전에 newP를 넣겠다. (추가되는 걸 맨위로)
+  // 추가 눌렀을때 텍스트가 제일 위로 올라온다고 생각하면됨.
+  // 최근 작성된것 바로 이전에 등록하겠다.
+
+  // 서브젯리스트 중 첫번째 자식 before에다가 insert해라라는 의미.
+  // insertBefore(추가되는 노드, 기준 노드)
+  // X라는 스판버튼을 눌렀을때 부모,나자신 지워선 안되고
+  // 부모 위의 조상을 지워야한다.
+
+  if (inquiryCommentList.children.length >= 1) {
+    inquiryAdmin1.style.display = 'none';
+    inquirylist1click = false;
+  }
+  inquiryCommentList.appendChild(newP);
+  listComment.value = ''; //  서브젯 벨류를 초기화 시킨다.
+  listComment.focus();
+  // 서브젯에 다시 포커스를 했을때 이전 적은것을 지우고 다시실행
+
+  // Get the current page number from the active pagination link
+  var currentPage = parseInt(document.querySelector('#js-pagination .active').textContent);
+
+  // Count the number of p elements
+  var pCount = document.querySelectorAll('.review_comment_list > p').length;
+
+  // Check if the number of p elements exceeds itemsPerPage
+  if (pCount > currentPage * itemsPerPage) {
+    // Move to the next page
+    var nextPage = currentPage + 1;
+    renderPage(nextPage);
+    renderOtherPagination(nextPage);
+  }
+
+  // ... rest of your code ...
+
+  var delBtn = document.querySelectorAll('.delete');
+
+  //★★ 중요함 ★★ 자주 사용되는 코드이다. ★★
+  var _loop3 = function _loop3(_i4) {
+    delBtn[_i4].addEventListener('click', function () {
+      if (delBtn[_i4].parentNode.parentNode) {
+        // 만약 부모의 부모가 존재한다면 
+        this.parentNode.parentNode.removeChild(this.parentNode);
+        // parentNode * 2번이면 subjectList를 삭제하는것
+        // 부모를 지울려면 부모의 부모까지 올라가야만 지울 수 있음.
+        // 이게 전제조건이다.
+        // 답변을 줘야한다면 만들 것을 또 생성 하면됨.
+
+        // 나자신.부모.부모.자식 삭제(나자신의 부모를 삭제하겠다.)
+      }
+    });
+  };
+  for (var _i4 = 0; _i4 < delBtn.length; _i4++) {
+    _loop3(_i4);
+  }
+  userName.value = '';
+
+  // The rest of your code here...
+});
+
+var listComment = document.querySelector('.list_comment');
+var button2 = document.querySelector('.inquiry_btn');
+listComment.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    button2.click();
+  }
+});
+window.addEventListener('scroll', function () {
+  // Get the current scroll position
+  var scrollPosition = window.scrollY;
+  // Set the desired scroll position
+  var targetPosition = 3300; // Change this value to the desired scroll position
+  // Check if the current scroll position is greater than or equal to the target position
+  if (scrollPosition >= targetPosition) {
+    // Animate the progress bars
+    document.querySelector('.progress1').style.width = '84%';
+    document.querySelector('.progress2').style.width = '67%';
+    document.querySelector('.progress3').style.width = '45%';
+    document.querySelector('.progress4').style.width = '26%';
+    document.querySelector('.progress5').style.width = '10%';
+  } else {
+    // Reset the progress bars to 0%
+    document.querySelector('.progress1').style.width = '0%';
+    document.querySelector('.progress2').style.width = '0%';
+    document.querySelector('.progress3').style.width = '0%';
+    document.querySelector('.progress4').style.width = '0%';
+    document.querySelector('.progress5').style.width = '0%';
+  }
+});
+window.addEventListener('load', function () {
+  // Scroll to the top of the page
+  window.scrollTo(0, 0);
+});
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -862,7 +1038,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56815" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63488" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

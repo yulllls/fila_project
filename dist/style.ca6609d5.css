@@ -641,7 +641,8 @@ header {
       border-bottom: 1px solid red;
       border-top: 1px solid red; }
     .sub_banner .pit .pl_choice:hover .choice {
-      color: red; }
+      color: red;
+      font-weight: bold; }
   .sub_banner .size_list_banner {
     width: 1000px;
     margin: 0 auto;
@@ -692,7 +693,7 @@ header {
           margin-top: 30px;
           width: 1420px;
           /* height: auto; */
-          background-color: #eee;
+          /* background-color: #eee; */
           transform: translateX(-50%); }
           .container .tab_menu .list li .cont .Goods {
             width: 1420px;
@@ -981,59 +982,75 @@ header {
                   width: 100px;
                   line-height: 40px;
                   margin-right: 20px;
-                  margin-bottom: 5px; }
+                  margin-bottom: 5px;
+                  color: #abaaaa; }
                 .container2 .tab_menu2 .list2 .review .review_right .star .score_evaluation .progres_chart .progress-bar {
                   width: 80%;
                   height: 30px;
                   background-color: #dedede;
                   font-weight: 600;
-                  font-size: 30px; }
+                  font-size: 30px;
+                  margin-top: 5px; }
                   .container2 .tab_menu2 .list2 .review .review_right .star .score_evaluation .progres_chart .progress-bar .progress {
                     height: 30px;
                     padding: 0;
                     text-align: center;
                     background-color: #002053;
-                    color: #111; }
+                    color: #111;
+                    transition: 1.3s;
+                    width: 0%; }
                   .container2 .tab_menu2 .list2 .review .review_right .star .score_evaluation .progres_chart .progress-bar .progress1 {
-                    width: 82%; }
+                    /* width: 84%; */ }
                   .container2 .tab_menu2 .list2 .review .review_right .star .score_evaluation .progres_chart .progress-bar .progress2 {
-                    width: 70%; }
+                    /* width: 67%; */
+                    background-color: #abaaaa; }
                   .container2 .tab_menu2 .list2 .review .review_right .star .score_evaluation .progres_chart .progress-bar .progress3 {
-                    width: 50%; }
+                    /* width: 45%; */
+                    background-color: #abaaaa; }
                   .container2 .tab_menu2 .list2 .review .review_right .star .score_evaluation .progres_chart .progress-bar .progress4 {
-                    width: 30%; }
+                    /*  width: 26%; */
+                    background-color: #abaaaa; }
                   .container2 .tab_menu2 .list2 .review .review_right .star .score_evaluation .progres_chart .progress-bar .progress5 {
-                    width: 10%; }
+                    /* width: 10%; */
+                    background-color: #abaaaa; }
                 .container2 .tab_menu2 .list2 .review .review_right .star .score_evaluation .progres_chart .num {
                   margin-left: 10px;
                   width: 30px;
-                  line-height: 30px; }
+                  line-height: 30px;
+                  margin-top: 5px;
+                  color: #abaaaa; }
+                .container2 .tab_menu2 .list2 .review .review_right .star .score_evaluation .progres_chart .good {
+                  color: black; }
       .container2 .tab_menu2 .list2 .filter {
         display: flex;
         justify-content: space-between;
-        width: 1420px;
-        margin-top: 10px; }
+        width: 1420px; }
         .container2 .tab_menu2 .list2 .filter .filter_list {
           display: flex;
           width: 300px;
           height: 50px;
           color: #888;
           margin-left: 100px; }
-          .container2 .tab_menu2 .list2 .filter .filter_list p {
+          .container2 .tab_menu2 .list2 .filter .filter_list .filter_list_all {
             font-size: 14px;
             margin-right: 20px;
             cursor: pointer;
-            line-height: 50px; }
+            line-height: 50px;
+            transition: 0.3s; }
+          .container2 .tab_menu2 .list2 .filter .filter_list .filter_list_all:hover {
+            color: black; }
         .container2 .tab_menu2 .list2 .filter .keyword {
           display: flex;
           position: relative;
           margin-right: 55px; }
-          .container2 .tab_menu2 .list2 .filter .keyword p {
+          .container2 .tab_menu2 .list2 .filter .keyword .keyword_text {
             font-size: 14px;
             color: #888;
             margin-right: 15px;
             line-height: 50px;
-            height: 50px; }
+            height: 50px;
+            transition: 0.3s;
+            cursor: pointer; }
           .container2 .tab_menu2 .list2 .filter .keyword .review_keyWord {
             width: 220px;
             padding-left: 35px;
@@ -1043,16 +1060,25 @@ header {
             position: absolute;
             top: 17px;
             left: -20px;
-            color: #c4c3c3; }
+            color: #c4c3c3;
+            cursor: pointer;
+            transition: 0.3s; }
           .container2 .tab_menu2 .list2 .filter .keyword .fas {
             position: absolute;
             top: 16px;
             right: 230px;
             color: #c4c3c3; }
+          .container2 .tab_menu2 .list2 .filter .keyword .keyword_text:hover {
+            color: black; }
+          .container2 .tab_menu2 .list2 .filter .keyword:hover .far {
+            color: black; }
+          .container2 .tab_menu2 .list2 .filter .keyword:hover .keyword_text {
+            color: black; }
       .container2 .tab_menu2 .list2 .comment {
-        position: relative;
+        position: absolute;
         display: flex;
-        margin-top: 20px;
+        bottom: -5px;
+        left: 0;
         /*         .asterion_btn:hover{
           color: white;
           background-color: #002053;
@@ -1225,7 +1251,7 @@ header {
             background-color: #002053;
             color: white; }
         .container2 .tab_menu2 .list2 .comment .review_comment {
-          width: 1140px;
+          width: 1153px;
           height: 103px;
           margin-left: 20px;
           box-sizing: border-box;
@@ -1238,7 +1264,7 @@ header {
           width: 75px;
           height: 50px;
           border-radius: 5px;
-          margin-left: -110px;
+          margin-left: -100px;
           border: 0;
           outline: none;
           border: 1px solid #888;
@@ -1249,14 +1275,14 @@ header {
           color: white; }
       .container2 .tab_menu2 .list2 .review_h3 {
         text-align: center;
-        margin-top: 30px; }
+        margin-top: 40px; }
       .container2 .tab_menu2 .list2 .review_list {
         width: 1330px;
         height: 30px;
         background-color: #eee;
         display: flex;
         margin: 0 auto;
-        margin-top: 30px;
+        margin-top: 5px;
         font-size: 14px;
         position: relative; }
         .container2 .tab_menu2 .list2 .review_list p {
@@ -1278,11 +1304,11 @@ header {
         width: 1330px;
         margin: 0 auto;
         background-color: white;
-        margin-top: 20px;
+        margin-top: 10px;
         text-align: left; }
         .container2 .tab_menu2 .list2 .review_comment_list .review_none {
           text-align: center;
-          margin-top: 100px;
+          margin-top: 130px;
           color: #888; }
         .container2 .tab_menu2 .list2 .review_comment_list p {
           display: flex;
@@ -1310,10 +1336,14 @@ header {
             font-size: 14px;
             width: 100px; }
       .container2 .tab_menu2 .list2 #js-pagination {
+        position: absolute;
         display: flex;
         justify-content: center;
         padding: 0;
-        margin-bottom: 50px; }
+        /* margin-top: 350px; */
+        bottom: -65px;
+        left: 50%;
+        transform: translateX(-50%); }
         .container2 .tab_menu2 .list2 #js-pagination p {
           margin: 0 5px;
           font-size: 20px; }
@@ -1332,6 +1362,173 @@ header {
           background-color: #ddd; }
       .container2 .tab_menu2 .list2 #js-pagination a:hover {
         background-color: #ddd; }
+      .container2 .tab_menu2 .list2 .inquiry {
+        width: 1420px;
+        display: flex;
+        margin-top: 30px;
+        justify-content: center; }
+        .container2 .tab_menu2 .list2 .inquiry .inquiry_left {
+          width: 300px;
+          margin-right: 30px; }
+          .container2 .tab_menu2 .list2 .inquiry .inquiry_left img {
+            margin-top: 15px;
+            width: 300px;
+            height: auto; }
+        .container2 .tab_menu2 .list2 .inquiry .inquiry_right {
+          width: 1000px; }
+        .container2 .tab_menu2 .list2 .inquiry .inquiry_write {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .container2 .tab_menu2 .list2 .inquiry .inquiry_write h2 {
+            line-height: 70px; }
+          .container2 .tab_menu2 .list2 .inquiry .inquiry_write .write {
+            width: 200px;
+            height: 40px;
+            border-radius: 20px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            background-color: white;
+            cursor: pointer;
+            line-height: 35px;
+            transition: 0.3s; }
+          .container2 .tab_menu2 .list2 .inquiry .inquiry_write .write:hover {
+            background-color: #002053;
+            color: white; }
+        .container2 .tab_menu2 .list2 .inquiry .a_s {
+          margin-top: 30px;
+          text-align: left; }
+          .container2 .tab_menu2 .list2 .inquiry .a_s strong {
+            font-size: 18px; }
+      .container2 .tab_menu2 .list2 .inquiry_list .inquiry_h3 {
+        margin-top: 40px;
+        text-align: center; }
+      .container2 .tab_menu2 .list2 .inquiry_list .inquiry_list2 {
+        width: 1330px;
+        height: 30px;
+        background-color: #eee;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 25px;
+        font-size: 14px;
+        position: relative; }
+        .container2 .tab_menu2 .list2 .inquiry_list .inquiry_list2 p {
+          width: 90px;
+          line-height: 30px;
+          box-sizing: border-box; }
+        .container2 .tab_menu2 .list2 .inquiry_list .inquiry_list2 .inquiry_line {
+          width: 1px;
+          height: 10px;
+          background-color: #bfbfbf;
+          margin-top: 10px; }
+        .container2 .tab_menu2 .list2 .inquiry_list .inquiry_list2 .inquiry_time {
+          width: 100px; }
+        .container2 .tab_menu2 .list2 .inquiry_list .inquiry_list2 .inquiry_detail {
+          width: 1070px; }
+        .container2 .tab_menu2 .list2 .inquiry_list .inquiry_list2 .inquiry_delete {
+          width: 70px; }
+      .container2 .tab_menu2 .list2 .inquiry_list .ilist {
+        margin-top: 10px;
+        display: flex;
+        width: 1330px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+        flex-wrap: wrap; }
+        .container2 .tab_menu2 .list2 .inquiry_list .ilist .inquiry_time {
+          width: 100px;
+          padding: 5px;
+          text-align: center;
+          box-sizing: border-box; }
+        .container2 .tab_menu2 .list2 .inquiry_list .ilist .inquiry_name {
+          width: 90px;
+          line-height: 45px; }
+        .container2 .tab_menu2 .list2 .inquiry_list .ilist .inquiry_detail {
+          text-align: center;
+          line-height: 45px;
+          width: 1070px; }
+        .container2 .tab_menu2 .list2 .inquiry_list .ilist .fas {
+          margin-left: 22px;
+          font-size: 20px;
+          margin-top: 12px; }
+        .container2 .tab_menu2 .list2 .inquiry_list .ilist .inquiry_comment_list {
+          width: 1330px;
+          margin: 0 auto;
+          background-color: white;
+          margin-top: 10px;
+          text-align: left; }
+          .container2 .tab_menu2 .list2 .inquiry_list .ilist .inquiry_comment_list .review_none {
+            text-align: center;
+            margin-top: 130px;
+            color: #888; }
+          .container2 .tab_menu2 .list2 .inquiry_list .ilist .inquiry_comment_list p {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #888;
+            font-size: 14px;
+            color: red; }
+            .container2 .tab_menu2 .list2 .inquiry_list .ilist .inquiry_comment_list p span {
+              display: block;
+              width: 90px;
+              text-align: center;
+              /* border-right: 1px solid #888; */
+              box-sizing: border-box;
+              /* border-bottom: 1px solid #888; */
+              padding: 5px; }
+            .container2 .tab_menu2 .list2 .inquiry_list .ilist .inquiry_comment_list p .detail {
+              width: 1070px; }
+            .container2 .tab_menu2 .list2 .inquiry_list .ilist .inquiry_comment_list p .delete {
+              width: 70px;
+              border-right: none;
+              cursor: pointer; }
+            .container2 .tab_menu2 .list2 .inquiry_list .ilist .inquiry_comment_list p .time {
+              font-size: 14px;
+              width: 100px; }
+      .container2 .tab_menu2 .list2 .inquiry_list .inquiry_admin {
+        width: 1330px;
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 20px; }
+        .container2 .tab_menu2 .list2 .inquiry_list .inquiry_admin .admin {
+          position: absolute;
+          top: 20px;
+          left: 30px; }
+        .container2 .tab_menu2 .list2 .inquiry_list .inquiry_admin .list_comment {
+          width: 1260px;
+          height: 60px;
+          padding-left: 120px;
+          box-sizing: border-box; }
+        .container2 .tab_menu2 .list2 .inquiry_list .inquiry_admin .add_btn {
+          width: 70px; }
+      .container2 .tab_menu2 .list2 .inquiry_list #js-pagination2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        /* margin-top: 350px; */
+        bottom: -65px;
+        left: 50%;
+        transform: translateX(-50%); }
+        .container2 .tab_menu2 .list2 .inquiry_list #js-pagination2 p {
+          margin: 0 5px;
+          font-size: 20px; }
+          .container2 .tab_menu2 .list2 .inquiry_list #js-pagination2 p a {
+            display: block;
+            border: 1px solid #ddd;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            text-align: center;
+            height: 40px;
+            width: 35px;
+            line-height: 40px; }
+        .container2 .tab_menu2 .list2 .inquiry_list #js-pagination2 .active {
+          color: #333;
+          background-color: #ddd; }
+      .container2 .tab_menu2 .list2 .inquiry_list #js-pagination2 a:hover {
+        background-color: #ddd; }
 
 .footer {
   width: 100%;
@@ -1349,25 +1546,22 @@ header {
       width: 200px; }
     .footer .footer_up .left {
       float: left;
-      width: 830px; }
+      width: 880px; }
       .footer .footer_up .left ul {
         overflow: hidden;
         margin-bottom: 50px; }
         .footer .footer_up .left ul li {
           float: left;
-          margin-right: 20px;
-          position: relative;
+          /* position: relative; */
           cursor: pointer;
           font-size: 14px; }
-        .footer .footer_up .left ul .li::before {
-          content: '';
-          display: block;
+        .footer .footer_up .left ul .li_line {
+          float: left;
           width: 1px;
           height: 20px;
           background-color: black;
-          position: absolute;
-          top: 1px;
-          left: -10px; }
+          margin-right: 10px;
+          margin-left: 10px; }
       .footer .footer_up .left .p1 {
         margin-bottom: 20px;
         font-size: 14px;
@@ -1403,7 +1597,7 @@ header {
     margin-top: 30px; }
     .footer .footer_middle .ico {
       float: left;
-      margin-left: 1080px;
+      margin-left: 1130px;
       width: 200px;
       height: 22px; }
       .footer .footer_middle .ico img {
@@ -1417,7 +1611,7 @@ header {
     .footer .footer_under .left {
       float: left;
       margin-left: 250px;
-      width: 830px; }
+      width: 880px; }
       .footer .footer_under .left ul {
         overflow: hidden; }
         .footer .footer_under .left ul li {

@@ -56,12 +56,13 @@
 
       </div> <!-- lnb -->
 
+<!-- <img src="../img/06. gnb/GNB_map1.svg" alt=""> -->
 
       <div class="gnb">
-        <p><img src="../img/06. gnb/gnb1.png" alt=""></p>
-        <p><img src="../img/06. gnb/gnb2.png" alt=""></p>
-        <p><img src="../img/06. gnb/gnb3.png" alt=""></p>
-        <p><img src="../img/06. gnb/gnb4.png" alt=""></p>
+        <p class="gnb1 gnbAll"><img src="../img/06. gnb/gnb1.png" alt=""></p>
+        <p class="gnb2 gnbAll"><img src="../img/06. gnb/gnb2.png" alt=""></p>
+        <p class="gnb3 gnbAll"><img src="../img/06. gnb/gnb3.png" alt=""></p>
+        <p class="gnb4 gnbAll"><img src="../img/06. gnb/gnb4.png" alt=""></p>
 
       </div>
 
@@ -922,11 +923,11 @@
 
                   <div class="score_evaluation">
                     <div class="progres_chart">
-                      <p>아주 좋아요 </p>
+                      <p class="good">아주 좋아요 </p>
                       <div class="progress-bar">
                         <div class="progress progress1"></div>
                       </div>
-                      <div class="num">105</div>
+                      <div class="num good">105</div>
                     </div>
                     <div class="progres_chart">
                       <p>맘에 들어요 </p>
@@ -968,22 +969,42 @@
 
             </div>
 
+
+            <h3 class="review_h3"> 리뷰목록</h3>
+
             <div class="filter">
               <div class="filter_list">
-                <p>추천순</p>
-                <p>최신순</p>
-                <p>별점순</p>
+                <p class="filter_list_all">추천순</p>
+                <p class="filter_list_all">최신순</p>
+                <p class="filter_list_all">별점순</p>
               </div>
 
               <div class="keyword">
                 <i class="far fa-check-circle"></i>
-                <p>포토/동영상 먼저 보기</p>
+                <p class="keyword_text">포토/동영상 먼저 보기</p>
                 <input type="text" class="review_keyWord" placeholder="리뷰 키워드 검색">
                 <i class="fas fa-search"></i>
               </div>
 
             </div>
 
+            <div class="review_list">
+              <p class="review_time reviewAll">날짜/시간</p>
+              <div class="review_line"></div>
+              <p class="review_name reviewAll">이름</p>
+              <div class="review_line"></div>
+              <p class="review_asterion reviewAll">별점</p>
+              <div class="review_line"></div>
+              <p class="review_size reviewAll">사이즈</p>
+              <div class="review_line"></div>
+              <p class="review_detail reviewAll">내용</p>
+              <div class="review_line"></div>
+              <p class="review_delete">지우기</p>
+            </div>
+
+            <div class="review_comment_list">
+              <div class="review_none">아직 댓글이 없습니다. 댓글을 입력하여 공간을 채워주세요 :) </div>
+            </div>
 
 
             <div class="comment">
@@ -1031,39 +1052,16 @@
                 <div class="sl_ex">완료</div>
               </div>
 
-              
 
-              <form action="" name="formname">
-                <input type="text" class="review_comment" placeholder="상품 리뷰를 작성해주세요!" autofocus
-                  onkeypress="JavaScript:press(this.form)">
 
+              <form action="" name="formname" onsubmit="event.preventDefault()">
+                <input type="text" class="review_comment" placeholder="상품 리뷰를 작성해주세요!" >
+                
                 <button type="button" class="add_btn">리뷰 등록</button>
-
               </form>
-              
-          
+
+
             </div>
-
-            <h3 class="review_h3"> 댓글목록</h3>
-            <div class="review_list">
-              <p class="review_time reviewAll">시간</p>
-              <div class="review_line"></div>
-              <p class="review_name reviewAll">이름</p>
-              <div class="review_line"></div>
-              <p class="review_asterion reviewAll">별점</p>
-              <div class="review_line"></div>
-              <p class="review_size reviewAll">사이즈</p>
-              <div class="review_line"></div>
-              <p class="review_detail reviewAll">내용</p>
-              <div class="review_line"></div>
-              <p class="review_delete">지우기</p>
-            </div>
-
-            <div class="review_comment_list"> 
-              <div class="review_none">아직 댓글이 없습니다. 댓글을 입력하여 공간을 채워주세요 :) </div>
-            </div>
-
-
             <ul id="js-pagination"></ul>
 
           </div> <!-- cont -->
@@ -1076,7 +1074,77 @@
           </a>
           <div id="tab2" class="cont">
 
-            상품 문의 페이지는 추후 제작 완료하겠습니다!
+            <div class="inquiry">
+              <div class="inquiry_left">
+                <img src="../img/03. 디테일/모델컷1.jpg" alt="1">
+              </div>
+
+              <div class="inquiry_right">
+
+                <div class="inquiry_write">
+                  <h2>인터내셔널 그래픽 반팔티</h2>
+
+                  <div class="write">문의하기</div>
+                </div>
+
+                <p class="a_s">
+                  <strong>자주 묻는 질문?</br></br></strong>
+                  A/S 안내 (품질보증 및 보상기준)
+                  · FILA 제품의 품질보증기간은 구입일로부터 1년 입니다.</br>
+
+                  · 제품의 불량에 의한 반품, 교환, A/S 등은 공정거래위원회에서 고시한 소비자분쟁해결기준에 따라 반품, 교환, A/S를 받을 수 있습니다.</br>
+                  </br>
+                  업무시간</br>
+                  오전 9시 - 오후 6시 (점심시간 : 오전 12시 ~ 오후 1시)</br>
+                  토, 일, 법정공휴일, 휴무일은 휴무로 고객센터 운영이 되지 않습니다.</br>
+                  </br></br>
+                  주문 변경 요청</br>
+                  · 출고 전 : 주문서 수정은 불가하기에 사이즈, 색상 변경 원하실 경우 취소후 재구매 해주셔야합니다.</br>
+                  · 출고 후 : 이미 출고가 완료된 경우에는 주문취소가 불가하기에 수령 후 반품 접수 진행주셔야합니다.
+                </p>
+
+
+              </div>
+
+
+            </div>
+
+            <div class="inquiry_list">
+
+              <h3 class="inquiry_h3">문의목록</h3>
+
+              <div class="inquiry_list2">
+                <p class="inquiry_time">날짜/시간</p>
+                <div class="inquiry_line"></div>
+                <p class="inquiry_name ">이름</p>
+                <div class="inquiry_line"></div>
+                <p class="inquiry_detail">내용</p>
+                <div class="inquiry_line"></div>
+                <p class="inquiry_delete">지우기</p>
+              </div>
+
+              <div class="ilist1 ilist">
+                <p class="inquiry_time">2023. 6. 15. 오후 4:42:33</p>
+                <p class="inquiry_name">김그린</p>
+                <p class="inquiry_detail">정말 반품비가 없는게 맞나요? 답변 부탁드립니다.</p>
+                <i class="fas fa-reply"></i>
+
+                <div class="inquiry_comment_list"> </div>
+
+                <form action="" name="formname" class="inquiry_admin">
+                  <p class="admin">운영자</p>
+                  <input type="text" class="list_comment" placeholder="문의 답글을 작성하기">
+
+
+                  <button type="button" class="inquiry_btn">문의 답변</button>
+                </form>
+
+              </div>
+
+
+              <ul id="js-pagination2"></ul>
+
+            </div>
 
           </div> <!-- cont -->
         </li>
@@ -1098,9 +1166,13 @@
       <div class="left">
         <ul>
           <li class="li">매장안내</li>
+          <div class="li_line"></div>
           <li class="li">공지사항</li>
+          <div class="li_line"></div>
           <li class="li">FILA MEMBERSHIP</li>
+          <div class="li_line"></div>
           <li class="li">대리점 개설문의</li>
+          <div class="li_line"></div>
           <li class="li">FILA 입찰 참여 안내</li>
         </ul>
 

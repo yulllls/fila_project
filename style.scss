@@ -1476,7 +1476,7 @@ main {
             color: white;
           }
 
-          .point_data{
+          .point_data {
             position: absolute;
             bottom: 10px;
             right: 7px;
@@ -1490,32 +1490,32 @@ main {
             transition: 0.3s
           }
 
-          .point_data:hover{
+          .point_data:hover {
             background-color: #002053;
             color: white;
           }
         }
       }
 
-      .point_menu1{
+      .point_menu1 {
         top: -80px;
         left: -100px;
         opacity: 0;
       }
 
-      .point_menu2{
+      .point_menu2 {
         top: -30px;
         left: -125px;
         opacity: 0;
       }
 
-      .point_menu3{
+      .point_menu3 {
         top: -15px;
         left: -85px;
         opacity: 0;
       }
 
-      .point_menu4{
+      .point_menu4 {
         top: -57px;
         left: -120px;
         opacity: 0;
@@ -1557,21 +1557,21 @@ main {
         left: 215px;
       }
 
-      .point_menu2_1{
+      .point_menu2_1 {
         top: -35px;
         left: -120px;
         opacity: 0;
       }
 
-      .point_menu2_2{
+      .point_menu2_2 {
         top: 0px;
-        left: -60px;    
+        left: -60px;
         opacity: 0;
       }
 
-      .point_menu2_3{
+      .point_menu2_3 {
         top: -70px;
-        left: -60px;    
+        left: -60px;
         opacity: 0;
       }
 
@@ -1587,13 +1587,13 @@ main {
         left: 263px;
       }
 
-      .point_menu3_1{
+      .point_menu3_1 {
         top: -50px;
         left: -50px;
         opacity: 0;
       }
 
-      .point_menu3_2{
+      .point_menu3_2 {
         top: -24px;
         left: -57px;
         opacity: 0;
@@ -1614,17 +1614,18 @@ main {
 
 }
 
-.sns{
+.sns {
   overflow: hidden;
   width: 1680px;
   margin: 0 auto;
   height: 800px;
 
-  h2{
+  h2 {
     text-align: center;
     margin-bottom: 30px;
   }
-  .sns_box{
+
+  .sns_box {
     float: left;
     width: 328px;
     height: 328px;
@@ -1633,140 +1634,148 @@ main {
     overflow: hidden;
     cursor: pointer;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       transition: 0.3s;
     }
 
 
-    img:hover{
+    img:hover {
       transform: scale(1.1);
     }
   }
 
   .sns_box:nth-child(5),
-  .sns_box:nth-child(10){
+  .sns_box:nth-child(10) {
     margin-right: 0;
   }
 }
 
-.footer{
+
+.footer {
   width: 100%;
   height: 430px;
   background-color: #f0f0f0;
+  margin-top: 30px;
 
-  .footer_up{
+  .footer_up {
     padding-top: 50px;
     width: 1680px;
     margin: 0 auto;
     overflow: hidden;
 
-    .logo{margin-left: 50px;
- float: left;
+    .logo {
+      margin-left: 50px;
+      float: left;
       width: 200px;
     }
 
-    .left{float: left;
-      width: 830px;
-        ul{
-          overflow: hidden;
-          margin-bottom: 50px;
-          li{
-            float: left;
-            margin-right: 20px;
-            position: relative;
-            cursor: pointer;
-            font-size: 14px;
-          }
-  
-          .li::before{
-            content: '';
-            display: block;
-            width: 1px;
-            height: 20px;
-            background-color: black;
-            position: absolute;
-            top: 1px;left: -10px;
-          }
-        }
-  
-        .p1{
-          margin-bottom: 20px;
-          font-size: 14px;
-          color: #a0a0a0;
-        }
-      
-        .p2{
-          font-size: 14px;
-          color: #a0a0a0;
-        }
-    }
-  
-  
-      .right{float: left;
-      
-        .cs_center{
-          width: 150px;
-          height: 40px;
-          border: 1px solid black;
-          border-radius: 15px;
-          text-align: center;
-          line-height: 40px;
-          margin-bottom: 20px;
-          transition: 0.3s;
-          font-weight: bold;
-          font-size: 14px;
+    .left {
+      float: left;
+      width: 880px;
+
+      ul {
+        overflow: hidden;
+        margin-bottom: 50px;
+
+        li {
+          float: left;
+          /* position: relative; */
           cursor: pointer;
-        }
-  
-        .cs_center:hover{
-          background-color: #002053;
-          color: white;
-        }
-  
-        p{
-          margin-top: 15px;
           font-size: 14px;
-          color: #a0a0a0;
+        }
+
+        .li_line{
+          float: left;
+          width: 1px;
+          height: 20px;
+          background-color: black;
+          margin-right: 10px;
+          margin-left: 10px;
         }
       }
 
+      .p1 {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #a0a0a0;
+      }
+
+      .p2 {
+        font-size: 14px;
+        color: #a0a0a0;
+      }
+    }
+
+
+    .right {
+      float: left;
+
+      .cs_center {
+        width: 150px;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 40px;
+        margin-bottom: 20px;
+        transition: 0.3s;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .cs_center:hover {
+        background-color: #002053;
+        color: white;
+      }
+
+      p {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #a0a0a0;
+      }
+    }
+
   }
 
-  .footer_middle{
+  .footer_middle {
     width: 1680px;
     margin: 0 auto;
     overflow: hidden;
     margin-top: 30px;
 
 
-    .ico{
+    .ico {
       float: left;
-      margin-left: 1080px;
+      margin-left: 1130px;
       width: 200px;
       height: 22px;
 
-      img{
-       height: 22px;
-       margin-right: 12px;
+      img {
+        height: 22px;
+        margin-right: 12px;
       }
-   }
+    }
 
   }
 
-  .footer_under{
+  .footer_under {
     width: 1680px;
     margin: 0 auto;
     overflow: hidden;
     margin-top: 50px;
-    .left{
+
+    .left {
       float: left;
       margin-left: 250px;
-      width: 830px;
-      ul{
+      width: 880px;
+
+      ul {
         overflow: hidden;
-        li{
+
+        li {
           font-size: 14px;
           float: left;
           margin-right: 20px;
@@ -1774,39 +1783,121 @@ main {
           cursor: pointer;
         }
 
-        .li::before{
+        .li::before {
           content: '';
           display: block;
           width: 1px;
           height: 20px;
           background-color: black;
           position: absolute;
-          top: 1px;left: -10px;
+          top: 1px;
+          left: -10px;
         }
       }
     }
 
 
-    .right{
+    .right {
       float: left;
 
 
-    p{
-      margin-right: 15px;
-      float: left;
-      font-size: 14px;
-    }
+      p {
+        margin-right: 15px;
+        float: left;
+        font-size: 14px;
+      }
 
-    #link{
-      float: left;
-      border: none;
-      background-color: #f0f0f0;
-      box-sizing: border-box;
-      height: 18px;
-      cursor: pointer;
-      font-weight: bold;
+      #link {
+        float: left;
+        border: none;
+        background-color: #f0f0f0;
+        box-sizing: border-box;
+        height: 18px;
+        cursor: pointer;
+        font-weight: bold;
+      }
     }
   }
+
+}
+
+.wing_banner {
+  width: 80px;
+  height: 450px;
+  position: fixed;
+  top: 50%;
+  right: -49px;
+  transform: translateY(-50%);
+  border: 1px solid #888;
+  box-sizing: border-box;
+  z-index: 9999;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+  display: flex;
+
+
+  .wing_left{
+    width: 30px;
+    height: 50px;
+
+    .fa-angle-double-left{
+      font-size: 30px;
+      margin-top: 20px;
+    }
+
+    p{
+      text-align: center;
+      margin-top: 15px;
+      line-height: 25px;
+    }
+  }
+
+  .wing_right{
+      width: 50px;
+      border-left: 1px solid #888;
+    div {
+      width: 49px;
+      height: 50px;
+      border-bottom: 1px solid #888;
+      box-sizing: border-box;
+      position: relative;
+  
+  
+      img {
+        width: 50px;
+        height: 50px;
+      }
+  
+  
+      .fas {
+        font-size: 60px;
+        position: absolute;
+      }
+  
+      .fa-caret-up {
+        top: -9px;
+        left: 5px;
+        transition: 0.3s;
+      }
+  
+      .fa-caret-down {
+        top: -7px;
+        left: 5px;
+        transition: 0.3s;
+      }
+    }
+    
+    .down {
+      border: none;
+    }
+  
+    .fa-caret-up:hover{
+      color: #002053;
+    }
+    .fa-caret-down:hover{
+      color: #002053;
+    }
   }
 
 }
