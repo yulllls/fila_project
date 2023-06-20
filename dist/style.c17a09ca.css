@@ -589,9 +589,6 @@ header {
       color: #444;
       cursor: pointer;
       transition: 0.3s; }
-  .menu_hidden .menu_list4 .size_all:hover {
-    color: white;
-    background-color: #002053; }
   .menu_hidden .menu_list5 #pr39_chk {
     display: none; }
   .menu_hidden .menu_list5 #pr39_49_chk {
@@ -746,24 +743,16 @@ header {
         background-color: black; }
       .main .container .color_box .color_blue {
         background-color: blue; }
-      .main .container .color_box .color_green {
-        background-color: green; }
       .main .container .color_box .color_gray {
         background-color: gray; }
       .main .container .color_box .color_pink {
         background-color: pink; }
-      .main .container .color_box .color_red {
-        background-color: red; }
       .main .container .color_box .color_wheat {
         background-color: wheat; }
       .main .container .color_box .color_yellow {
         background-color: yellow; }
       .main .container .color_box .color_orange {
         background-color: orange; }
-      .main .container .color_box .color_darkblue {
-        background-color: #002053; }
-      .main .container .color_box .color_darkgreen {
-        background-color: darkgreen; }
 
 #js-pagination {
   display: flex;

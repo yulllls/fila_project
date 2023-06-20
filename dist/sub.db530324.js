@@ -131,7 +131,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/01-2.핫써머 릴렉스핏 풀집업 래쉬가드.jpg",
   gender: "남성",
   shopName: "핫써머 릴렉스핏 풀집업 래쉬가드",
-  shopPrice: "89,000원"
+  shopPrice: "89,000원",
+  color: ['black'],
+  style: ['스윔웨어', '온라인 단독', '바람막이/아노락', '전체보기'],
+  sports: ['트레이닝', '러닝'],
+  size: ['100', '105', '110', '115']
 }, {
   id: "shoplist2",
   src: "../img/images/02.핫써머 릴렉스핏 래쉬가드.jpg",
@@ -139,7 +143,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/02-2.핫써머 릴렉스핏 래쉬가드.jpg",
   gender: "남성",
   shopName: "핫써머 릴렉스핏 래쉬가드",
-  shopPrice: "79,000원"
+  shopPrice: "79,000원",
+  color: ['black'],
+  style: ['스윔웨어', '온라인 단독', '바람막이/아노락', '전체보기', '후드티/맨투맨'],
+  sports: ['트레이닝', '러닝'],
+  size: ['100', '105', '110', '115']
 }, {
   id: "shoplist3",
   src: "../img/images/03.컴포트핏 인터내셔널 반팔 카라티.jpg",
@@ -147,7 +155,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/03-2.컴포트핏 인터내셔널 반팔 카라티.jpg",
   gender: "공용",
   shopName: "컴포트핏 인터내셔널 반팔 카라티",
-  shopPrice: "69,000원"
+  shopPrice: "69,000원",
+  color: ['white', 'wheat'],
+  style: ['티셔츠', '온라인 단독', '전체보기'],
+  sports: ['라이프스타일', '테니스', '골프'],
+  size: ['95', '100', '105', '110']
 }, {
   id: "shoplist4",
   src: "../img/images/04.인터내셔널 스몰 로고 티셔츠.jpg",
@@ -155,7 +167,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/04-2.인터내셔널 스몰 로고 티셔츠.jpg",
   gender: "공용 컴포트핏 라이프스타일",
   shopName: "인터내셔널 스몰 로고 티셔츠",
-  shopPrice: "39,000원"
+  shopPrice: "39,000원",
+  color: ['black', 'blue'],
+  style: ['티셔츠', '전체보기'],
+  sports: ['라이프스타일', '테니스', '골프'],
+  size: ['95', '100', '105', '110']
 }, {
   id: "shoplist5",
   src: "../img/images/05.인터내셔널 반팔 카라티.jpg",
@@ -163,7 +179,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/05-2.인터내셔널 반팔 카라티.jpg",
   gender: "공용 컴포트핏 라이프스타일",
   shopName: "인터내셔널 반팔 카라티",
-  shopPrice: "69,000원"
+  shopPrice: "69,000원",
+  color: ['blue'],
+  style: ['티셔츠', '전체보기'],
+  sports: ['라이프스타일', '테니스', '골프'],
+  size: ['95', '100', '105', '110']
 }, {
   id: "shoplist6",
   src: "../img/images/06.스포츠 인터내셔널 로고 반팔티.jpg",
@@ -171,7 +191,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/06-2.스포츠 인터내셔널 로고 반팔티.jpg",
   gender: "공용 컴포트핏 라이프스타일",
   shopName: "스포츠 인터내셔널 로고 반팔티",
-  shopPrice: "49,000원"
+  shopPrice: "49,000원",
+  color: ['white', 'black', 'pink', 'yellow'],
+  style: ['티셔츠', '전체보기'],
+  sports: ['라이프스타일', '테니스'],
+  size: ['95', '100', '105', '110']
 }, {
   id: "shoplist7",
   src: "../img/images/07.인터내셔널 그래픽 반팔티.jpg",
@@ -179,7 +203,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/07-2.인터내셔널 그래픽 반팔티.jpg",
   gender: "공용 오버핏 라이프스타일",
   shopName: "인터내셔널 그래픽 반팔티",
-  shopPrice: "49,000원"
+  shopPrice: "49,000원",
+  color: ['white', 'black', 'yellow'],
+  style: ['티셔츠', '전체보기'],
+  sports: ['라이프스타일'],
+  size: ['90', '95', '100', '105', '110']
 }, {
   id: "shoplist8",
   src: "../img/images/08.인터내셔널 그래픽 반팔티.jpg",
@@ -187,7 +215,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/08-2.인터내셔널 그래픽 반팔티.jpg",
   gender: "공용 오버핏 라이프스타일",
   shopName: "인터내셔널 그래픽 반팔티",
-  shopPrice: "49,000원"
+  shopPrice: "49,000원",
+  color: ['white', 'black', 'yellow'],
+  style: ['티셔츠', '전체보기'],
+  sports: ['라이프스타일'],
+  size: ['90', '95', '100', '105', '110']
 }, {
   id: "shoplist9",
   src: "../img/images/09.핫써머 Joyful 나시티.jpg",
@@ -195,7 +227,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/09-2.핫써머 Joyful 나시티.jpg",
   gender: "남성 라이프스타일",
   shopName: "핫써머 Joyful 나시티",
-  shopPrice: "45,000원"
+  shopPrice: "45,000원",
+  color: ['black', 'orange'],
+  style: ['스윔웨어', '트레이닝', '세트', '전체보기'],
+  sports: ['트레이닝', '러닝', '라이프스타일'],
+  size: ['90', '95', '100', '105']
 }, {
   id: "shoplist10",
   src: "../img/images/10.핫써머 Fila festa 나시티.jpg",
@@ -203,7 +239,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/10-2.핫써머 Fila festa 나시티.jpg",
   gender: "남성 컴포트핏 라이프스타일",
   shopName: "핫써머 Fila festa 나시티",
-  shopPrice: "39,000원"
+  shopPrice: "39,000원",
+  color: ['white', 'black', 'blue'],
+  style: ['스윔웨어', '트레이닝', '세트', '전체보기'],
+  sports: ['트레이닝', '러닝', '라이프스타일'],
+  size: ['90', '95', '100', '105']
 }, {
   id: "shoplist11",
   src: "../img/images/11.페스타 그래픽 티셔츠.jpg",
@@ -211,7 +251,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/11-2.페스타 그래픽 티셔츠.jpg",
   gender: "공용 레귤러핏 라이프스타일",
   shopName: "페스타 그래픽 티셔츠",
-  shopPrice: "49,000원"
+  shopPrice: "49,000원",
+  color: ['white', 'orange', 'yellow'],
+  style: ['티셔츠', '전체보기'],
+  sports: ['라이프스타일', '러닝'],
+  size: ['90', '95', '100', '105']
 }, {
   id: "shoplist12",
   src: "../img/images/12.컴포트핏 인터내셔널 6부 반바지.jpg",
@@ -219,7 +263,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/12-2.컴포트핏 인터내셔널 6부 반바지.jpg",
   gender: "공용 라이프스타일",
   shopName: "컴포트핏 인터내셔널 6부 반바지",
-  shopPrice: "59,000원"
+  shopPrice: "59,000원",
+  color: ['blue'],
+  style: ['팬츠', '트레이닝 세트', '전체보기'],
+  sports: ['라이프스타일', '러닝', '테니스'],
+  size: ['90', '95', '100', '105']
 }, {
   id: "shoplist13",
   src: "../img/images/13.레터링 그래픽 티셔츠.jpg",
@@ -227,7 +275,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/13-2.레터링 그래픽 티셔츠.jpg",
   gender: "공용 컴포트핏 라이프스타일",
   shopName: "레터링 그래픽 티셔츠",
-  shopPrice: "49,000원"
+  shopPrice: "49,000원",
+  color: ['white', 'wheat', 'orange'],
+  style: ['티셔츠', '전체보기'],
+  sports: ['라이프스타일', '러닝', '테니스'],
+  size: ['90', '95', '100', '105', '110']
 }, {
   id: "shoplist14",
   src: "../img/images/14.레코드 그래픽 티셔츠.jpg",
@@ -235,7 +287,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/14-2.레코드 그래픽 티셔츠.jpg",
   gender: "공용 컴포트핏 라이프스타일",
   shopName: "레코드 그래픽 티셔츠",
-  shopPrice: "59,000원"
+  shopPrice: "59,000원",
+  color: ['white', 'black', 'wheat'],
+  style: ['티셔츠', '전체보기'],
+  sports: ['라이프스타일', '러닝', '테니스'],
+  size: ['90', '95', '100', '105', '110']
 }, {
   id: "shoplist15",
   src: "../img/images/15.핫써머 우븐 포켓 반바지.jpg",
@@ -243,7 +299,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/15-2.핫써머 우븐 포켓 반바지.jpg",
   gender: "남성 라이프스타일",
   shopName: "핫써머 우븐 포켓 반바지",
-  shopPrice: "69,000원"
+  shopPrice: "69,000원",
+  color: ['orange', 'pink', 'yellow'],
+  style: ['팬츠', '트레이닝 세트', '전체보기'],
+  sports: ['라이프스타일', '러닝', '테니스'],
+  size: ['90', '95', '100', '105', '110']
 }, {
   id: "shoplist16",
   src: "../img/images/16.핫써머 모노그램 나시티.jpg",
@@ -251,7 +311,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/16-2.핫써머 모노그램 나시티.jpg",
   gender: "남성 컴포트핏 라이프스타일",
   shopName: "핫써머 모노그램 나시티",
-  shopPrice: "49,000원"
+  shopPrice: "49,000원",
+  color: ['blue'],
+  style: ['스윔웨어', '트레이닝 세트', '전체보기'],
+  sports: ['라이프스타일', '러닝'],
+  size: ['100', '105', '110', '115']
 }, {
   id: "shoplist17",
   src: "../img/images/17.핫써머 씨어서커 우븐반바지.jpg",
@@ -259,7 +323,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/17-2.핫써머 씨어서커 우븐반바지.jpg",
   gender: "공용 라이프스타일",
   shopName: "핫써머 씨어서커 우븐반바지",
-  shopPrice: "69,000원"
+  shopPrice: "69,000원",
+  color: ['blue'],
+  style: ['팬츠', '트레이닝 세트', '전체보기'],
+  sports: ['라이프스타일', '트레이닝'],
+  size: ['95', '100', '105', '110']
 }, {
   id: "shoplist18",
   src: "../img/images/18.핫써머 씨어서커 아노락 바람막이.jpg",
@@ -267,7 +335,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/18-2.핫써머 씨어서커 아노락 바람막이.jpg",
   gender: "공용 라이프스타일",
   shopName: "핫써머 씨어서커 아노락 바람막이",
-  shopPrice: "119,000원"
+  shopPrice: "119,000원",
+  color: ['blue'],
+  style: ['바람막이/아노락', '전체보기'],
+  sports: ['라이프스타일', '트레이닝'],
+  size: ['100', '105', '110', '115']
 }, {
   id: "shoplist19",
   src: "../img/images/19.핫써머 사이드프린트 우븐 반바지.jpg",
@@ -275,7 +347,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/19-2.핫써머 사이드프린트 우븐 반바지.jpg",
   gender: "공용 레귤러핏 라이프스타일",
   shopName: "핫써머 사이드프린트 우븐 반바지",
-  shopPrice: "69,000원"
+  shopPrice: "69,000원",
+  color: ['black', 'yellow'],
+  style: ['티셔츠', '전체보기'],
+  sports: ['라이프스타일', '트레이닝'],
+  size: ['95', '100', '105', '110']
 }, {
   id: "shoplist20",
   src: "../img/images/20.레코드 그래픽 티셔츠.jpg",
@@ -283,7 +359,11 @@ var shopBoxData = [{
   imgHidden2: "../img/images/20-2.레코드 그래픽 티셔츠.jpg",
   gender: "공용 컴포트핏 라이프스타일",
   shopName: "레코드 그래픽 티셔츠",
-  shopPrice: "59,000원"
+  shopPrice: "59,000원",
+  color: ['white', 'black', 'pink'],
+  style: ['티셔츠', '온라인 단독', '전체보기'],
+  sports: ['라이프스타일'],
+  size: ['95', '100', '105', '110']
 }
 /* { 
   id: "shoplist21", 
@@ -539,19 +619,44 @@ filter.addEventListener('click', function () {
 });
 var wear = document.querySelector('.wear');
 var wearlist = document.querySelectorAll('.wear li');
+
+// Add a click event listener to each wear list item
 wearlist.forEach(function (wearlists) {
   wearlists.addEventListener('click', function () {
     var icon = wearlists.querySelector('i');
     if (icon.classList.contains('fa-square')) {
       icon.setAttribute('class', 'far fa-check-square');
+
+      // Get the selected style from the clicked element
+      var selectedStyle = wearlists.textContent.trim();
+
+      // Filter the data based on the selected style
+      var filteredData = _data.default.filter(function (item) {
+        return item.style.includes(selectedStyle);
+      });
+
+      // Show only the items with the selected style
+      filteredData.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'block';
+      });
+
+      // Hide the items that do not have the selected style
+      var nonFilteredData = _data.default.filter(function (item) {
+        return !item.style.includes(selectedStyle);
+      });
+      nonFilteredData.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'none';
+      });
     } else {
       icon.setAttribute('class', 'far fa-square');
+
+      // Show all items
+      _data.default.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'block';
+      });
     }
   });
 });
-
-//------------
-
 var btnAll = document.querySelectorAll('.btn_all');
 var btnIco = document.querySelectorAll('.btn_all i');
 var clickBtn = false;
@@ -560,8 +665,34 @@ btnAll.forEach(function (btn) {
     var icon = btn.querySelector('i');
     if (icon.classList.contains('fa-square')) {
       icon.setAttribute('class', 'far fa-check-square');
+
+      // Get the selected sport from the clicked element
+      var selectedSport = btn.textContent.trim();
+
+      // Filter the data based on the selected sport
+      var filteredData = _data.default.filter(function (item) {
+        return item.sports.includes(selectedSport);
+      });
+
+      // Show only the items with the selected sport
+      filteredData.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'block';
+      });
+
+      // Hide the items that do not have the selected sport
+      var nonFilteredData = _data.default.filter(function (item) {
+        return !item.sports.includes(selectedSport);
+      });
+      nonFilteredData.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'none';
+      });
     } else {
       icon.setAttribute('class', 'far fa-square');
+
+      // Show all items
+      _data.default.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'block';
+      });
     }
   });
 });
@@ -570,18 +701,6 @@ btnAll.forEach(function (btn) {
 
 var price = document.querySelectorAll('.price');
 var prIco = document.querySelectorAll('.price i');
-
-/* price.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const icon = btn.querySelector('i');
-    if (icon.classList.contains('fa-square')) {
-      icon.setAttribute('class', 'far fa-check-square');
-    } else {
-      icon.setAttribute('class', 'far fa-square');
-    }
-  });
-}); */
-
 price.forEach(function (btn) {
   btn.addEventListener('click', function () {
     var icon = btn.querySelector('i');
@@ -871,6 +990,118 @@ var _loop = function _loop(_i8) {
 for (var _i8 = 0; _i8 < img_hidden2.length; _i8++) {
   _loop(_i8);
 }
+var colors = document.querySelectorAll('.menu_list3 .color_one');
+console.log(colors);
+colors.forEach(function (color) {
+  color.addEventListener('click', function () {
+    // Get the color class from the clicked element
+    var selectedColor = color.classList[1].replace('color_', '');
+
+    // Check if the color is already selected
+    if (color.classList.contains('selected')) {
+      // Remove the selected class from the color element
+      color.classList.remove('selected');
+
+      // Show all items
+      _data.default.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'block';
+      });
+    } else {
+      // Add the selected class to the color element
+      color.classList.add('selected');
+
+      // Filter the data based on the selected color
+      var filteredData = _data.default.filter(function (item) {
+        return item.color.includes(selectedColor);
+      });
+
+      // Show only the items with the selected color
+      filteredData.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'block';
+      });
+
+      // Hide the items that do not have the selected color
+      var nonFilteredData = _data.default.filter(function (item) {
+        return !item.color.includes(selectedColor);
+      });
+      nonFilteredData.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'none';
+      });
+    }
+  });
+});
+
+/* const sizeList = document.querySelectorAll('.size_all');
+
+sizeList.forEach(sizeLists => {
+  sizeLists.addEventListener('click', () => {
+    // Check if the clicked element is already selected
+    if (sizeLists.style.backgroundColor === 'rgb(0, 32, 83)') {
+      // If it is, deselect it
+      sizeLists.style.backgroundColor = '';
+      sizeLists.style.color = '';
+    } else {
+      // If it's not, deselect all other size list elements
+      sizeList.forEach(i => {
+        i.style.backgroundColor = '';
+        i.style.color = '';
+      });
+
+      // Select the clicked element
+      sizeLists.style.backgroundColor = '#002053';
+      sizeLists.style.color = 'white';
+    }
+  });
+});
+ */
+
+var sizeList = document.querySelectorAll('.size_all');
+sizeList.forEach(function (sizeLists) {
+  sizeLists.addEventListener('click', function () {
+    // Check if the clicked element is already selected
+    if (sizeLists.style.backgroundColor === 'rgb(0, 32, 83)') {
+      // If it is, deselect it
+      sizeLists.style.backgroundColor = '';
+      sizeLists.style.color = '';
+
+      // Show all items when the filter is removed
+      _data.default.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'block';
+      });
+    } else {
+      // If it's not, deselect all other size list elements
+      sizeList.forEach(function (i) {
+        i.style.backgroundColor = '';
+        i.style.color = '';
+      });
+
+      // Select the clicked element
+      sizeLists.style.backgroundColor = '#002053';
+      sizeLists.style.color = 'white';
+
+      // Get the selected size from the clicked element
+      var selectedSize = sizeLists.textContent.trim();
+
+      // Filter the data based on the selected size
+      var filteredData = _data.default.filter(function (item) {
+        return item.size.includes(selectedSize);
+      });
+
+      // Show only the items with the selected size
+      filteredData.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'block';
+      });
+
+      // Hide the items that do not have the selected size
+      var nonFilteredData = _data.default.filter(function (item) {
+        return !item.size.includes(selectedSize);
+      });
+      nonFilteredData.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'none';
+      });
+    }
+  });
+});
 
 /* let itemsPerPage = 20;
 let totalPages = Math.ceil(shopBoxData.length / itemsPerPage);
@@ -1046,7 +1277,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53956" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59859" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -255,27 +255,47 @@ filter.addEventListener('click', () => {
 });
 
 
-const wear = document.querySelector('.wear')
-const wearlist = document.querySelectorAll('.wear li')
+const wear = document.querySelector('.wear');
+const wearlist = document.querySelectorAll('.wear li');
 
 
+// Add a click event listener to each wear list item
 wearlist.forEach(wearlists => {
   wearlists.addEventListener('click', () => {
     const icon = wearlists.querySelector('i');
     if (icon.classList.contains('fa-square')) {
       icon.setAttribute('class', 'far fa-check-square');
+
+      // Get the selected style from the clicked element
+      const selectedStyle = wearlists.textContent.trim();
+
+      // Filter the data based on the selected style
+      const filteredData = shopBoxData.filter(item => item.style.includes(selectedStyle));
+
+      // Show only the items with the selected style
+      filteredData.forEach(item => {
+        document.getElementById(item.id).style.display = 'block';
+      });
+
+      // Hide the items that do not have the selected style
+      const nonFilteredData = shopBoxData.filter(item => !item.style.includes(selectedStyle));
+      nonFilteredData.forEach(item => {
+        document.getElementById(item.id).style.display = 'none';
+      });
     } else {
       icon.setAttribute('class', 'far fa-square');
+
+      // Show all items
+      shopBoxData.forEach(item => {
+        document.getElementById(item.id).style.display = 'block';
+      });
     }
   });
 });
 
 
-//------------
-
-const btnAll = document.querySelectorAll('.btn_all')
-
-const btnIco = document.querySelectorAll('.btn_all i')
+const btnAll = document.querySelectorAll('.btn_all');
+const btnIco = document.querySelectorAll('.btn_all i');
 
 let clickBtn = false;
 
@@ -284,12 +304,33 @@ btnAll.forEach(btn => {
     const icon = btn.querySelector('i');
     if (icon.classList.contains('fa-square')) {
       icon.setAttribute('class', 'far fa-check-square');
+
+      // Get the selected sport from the clicked element
+      const selectedSport = btn.textContent.trim();
+
+      // Filter the data based on the selected sport
+      const filteredData = shopBoxData.filter(item => item.sports.includes(selectedSport));
+
+      // Show only the items with the selected sport
+      filteredData.forEach(item => {
+        document.getElementById(item.id).style.display = 'block';
+      });
+
+      // Hide the items that do not have the selected sport
+      const nonFilteredData = shopBoxData.filter(item => !item.sports.includes(selectedSport));
+      nonFilteredData.forEach(item => {
+        document.getElementById(item.id).style.display = 'none';
+      });
     } else {
       icon.setAttribute('class', 'far fa-square');
+
+      // Show all items
+      shopBoxData.forEach(item => {
+        document.getElementById(item.id).style.display = 'block';
+      });
     }
   });
 });
-
 
 
 //사이즈 클릭 기능 만들기 ,html 582번
@@ -297,18 +338,6 @@ btnAll.forEach(btn => {
 const price = document.querySelectorAll('.price')
 
 const prIco = document.querySelectorAll('.price i')
-
-
-/* price.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const icon = btn.querySelector('i');
-    if (icon.classList.contains('fa-square')) {
-      icon.setAttribute('class', 'far fa-check-square');
-    } else {
-      icon.setAttribute('class', 'far fa-square');
-    }
-  });
-}); */
 
 price.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -486,7 +515,7 @@ ninebox.addEventListener('click', () => {
     for (let i = 0; i < shopbox.length; i++) {
       shopbox[i].style.width = '340px';
       shopbox[i].style.height = '452.5px';
-     container.style.marginLeft = '12px'
+      container.style.marginLeft = '12px'
     }
     for (let i = 0; i < purchase.length; i++) {
       purchase[i].style.width = '75%';
@@ -645,6 +674,116 @@ for (let i = 0; i < img_hidden2.length; i++) {
   })
 }
 
+const colors = document.querySelectorAll('.menu_list3 .color_one');
+
+console.log(colors)
+
+colors.forEach(color => {
+  color.addEventListener('click', () => {
+    // Get the color class from the clicked element
+    const selectedColor = color.classList[1].replace('color_', '');
+
+    // Check if the color is already selected
+    if (color.classList.contains('selected')) {
+      // Remove the selected class from the color element
+      color.classList.remove('selected');
+
+      // Show all items
+      shopBoxData.forEach(item => {
+        document.getElementById(item.id).style.display = 'block';
+      });
+    } else {
+      // Add the selected class to the color element
+      color.classList.add('selected');
+
+      // Filter the data based on the selected color
+      const filteredData = shopBoxData.filter(item => item.color.includes(selectedColor));
+
+      // Show only the items with the selected color
+      filteredData.forEach(item => {
+        document.getElementById(item.id).style.display = 'block';
+      });
+
+      // Hide the items that do not have the selected color
+      const nonFilteredData = shopBoxData.filter(item => !item.color.includes(selectedColor));
+      nonFilteredData.forEach(item => {
+        document.getElementById(item.id).style.display = 'none';
+      });
+    }
+  });
+});
+
+
+
+/* const sizeList = document.querySelectorAll('.size_all');
+
+sizeList.forEach(sizeLists => {
+  sizeLists.addEventListener('click', () => {
+    // Check if the clicked element is already selected
+    if (sizeLists.style.backgroundColor === 'rgb(0, 32, 83)') {
+      // If it is, deselect it
+      sizeLists.style.backgroundColor = '';
+      sizeLists.style.color = '';
+    } else {
+      // If it's not, deselect all other size list elements
+      sizeList.forEach(i => {
+        i.style.backgroundColor = '';
+        i.style.color = '';
+      });
+
+      // Select the clicked element
+      sizeLists.style.backgroundColor = '#002053';
+      sizeLists.style.color = 'white';
+    }
+  });
+});
+ */
+
+const sizeList = document.querySelectorAll('.size_all');
+
+sizeList.forEach(sizeLists => {
+  sizeLists.addEventListener('click', () => {
+    // Check if the clicked element is already selected
+    if (sizeLists.style.backgroundColor === 'rgb(0, 32, 83)') {
+      // If it is, deselect it
+      sizeLists.style.backgroundColor = '';
+      sizeLists.style.color = '';
+
+      // Show all items when the filter is removed
+      shopBoxData.forEach(item => {
+        document.getElementById(item.id).style.display = 'block';
+      });
+    } else {
+      // If it's not, deselect all other size list elements
+      sizeList.forEach(i => {
+        i.style.backgroundColor = '';
+        i.style.color = '';
+      });
+
+      // Select the clicked element
+      sizeLists.style.backgroundColor = '#002053';
+      sizeLists.style.color = 'white';
+
+      // Get the selected size from the clicked element
+      const selectedSize = sizeLists.textContent.trim();
+
+      // Filter the data based on the selected size
+      const filteredData = shopBoxData.filter(item => item.size.includes(selectedSize));
+
+      // Show only the items with the selected size
+      filteredData.forEach(item => {
+        document.getElementById(item.id).style.display = 'block';
+      });
+
+      // Hide the items that do not have the selected size
+      const nonFilteredData = shopBoxData.filter(item => !item.size.includes(selectedSize));
+      nonFilteredData.forEach(item => {
+        document.getElementById(item.id).style.display = 'none';
+      });
+    }
+  });
+});
+
 /* let itemsPerPage = 20;
 let totalPages = Math.ceil(shopBoxData.length / itemsPerPage);
 
@@ -660,6 +799,7 @@ observer.observe(container, { childList: true });
 function renderPagination(currentPage) {
 
 } //아이템 갯수를 파악하여 최신 업데이트 하는 렌딩페이지  */
+
 
 
 let itemsPerPage = 20;
@@ -790,7 +930,7 @@ function renderOtherPagination(currentPage) {
   });
   lastLi.appendChild(lastA);
   pagination.appendChild(lastLi);
-} 
+}
 
 const wingBanner = document.querySelector('.wing_banner')
 
