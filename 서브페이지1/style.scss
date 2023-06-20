@@ -1083,8 +1083,9 @@ header {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
+    flex-direction: row;
+    margin-left: 9px;
+    transition: 0.3s;
 
     .shop_box {
       width: 272px;
@@ -1092,10 +1093,12 @@ header {
       /* background-color: aqua; */
       border: 1px solid #eee;
       box-sizing: border-box;
+      /* margin: 0 auto; */
       margin-bottom: 230px;
       position: relative;
       transition: 0.3s;
       display: block;
+      margin-right: 10px; 
 
 
       .product {
@@ -1294,13 +1297,13 @@ header {
 
   }
 
-  .shop_box:nth-child(5),
+/*   .shop_box:nth-child(5),
   .shop_box:nth-child(10),
   .shop_box:nth-child(15),
   .shop_box:nth-child(20) {
     margin-right: 0;
   }
-
+ */
 
 }
 

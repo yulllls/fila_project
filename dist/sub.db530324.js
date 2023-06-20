@@ -145,7 +145,7 @@ var shopBoxData = [{
   src: "../img/images/03.컴포트핏 인터내셔널 반팔 카라티.jpg",
   imgHidden: "../img/images/03-1.컴포트핏 인터내셔널 반팔 카라티.jpg",
   imgHidden2: "../img/images/03-2.컴포트핏 인터내셔널 반팔 카라티.jpg",
-  genderAll: "공용",
+  gender: "공용",
   shopName: "컴포트핏 인터내셔널 반팔 카라티",
   shopPrice: "69,000원"
 }, {
@@ -153,7 +153,7 @@ var shopBoxData = [{
   src: "../img/images/04.인터내셔널 스몰 로고 티셔츠.jpg",
   imgHidden: "../img/images/04-1.인터내셔널 스몰 로고 티셔츠.jpg",
   imgHidden2: "../img/images/04-2.인터내셔널 스몰 로고 티셔츠.jpg",
-  genderAll: "공용 컴포트핏 라이프스타일",
+  gender: "공용 컴포트핏 라이프스타일",
   shopName: "인터내셔널 스몰 로고 티셔츠",
   shopPrice: "39,000원"
 }, {
@@ -161,7 +161,7 @@ var shopBoxData = [{
   src: "../img/images/05.인터내셔널 반팔 카라티.jpg",
   imgHidden: "../img/images/05-1.인터내셔널 반팔 카라티.jpg",
   imgHidden2: "../img/images/05-2.인터내셔널 반팔 카라티.jpg",
-  genderAll: "공용 컴포트핏 라이프스타일",
+  gender: "공용 컴포트핏 라이프스타일",
   shopName: "인터내셔널 반팔 카라티",
   shopPrice: "69,000원"
 }, {
@@ -169,7 +169,7 @@ var shopBoxData = [{
   src: "../img/images/06.스포츠 인터내셔널 로고 반팔티.jpg",
   imgHidden: "../img/images/06-1.스포츠 인터내셔널 로고 반팔티.jpg",
   imgHidden2: "../img/images/06-2.스포츠 인터내셔널 로고 반팔티.jpg",
-  genderAll: "공용 컴포트핏 라이프스타일",
+  gender: "공용 컴포트핏 라이프스타일",
   shopName: "스포츠 인터내셔널 로고 반팔티",
   shopPrice: "49,000원"
 }, {
@@ -177,7 +177,7 @@ var shopBoxData = [{
   src: "../img/images/07.인터내셔널 그래픽 반팔티.jpg",
   imgHidden: "../img/images/07-1.인터내셔널 그래픽 반팔티.jpg",
   imgHidden2: "../img/images/07-2.인터내셔널 그래픽 반팔티.jpg",
-  genderAll: "공용 오버핏 라이프스타일",
+  gender: "공용 오버핏 라이프스타일",
   shopName: "인터내셔널 그래픽 반팔티",
   shopPrice: "49,000원"
 }, {
@@ -185,7 +185,7 @@ var shopBoxData = [{
   src: "../img/images/08.인터내셔널 그래픽 반팔티.jpg",
   imgHidden: "../img/images/08-1.인터내셔널 그래픽 반팔티.jpg",
   imgHidden2: "../img/images/08-2.인터내셔널 그래픽 반팔티.jpg",
-  genderAll: "공용 오버핏 라이프스타일",
+  gender: "공용 오버핏 라이프스타일",
   shopName: "인터내셔널 그래픽 반팔티",
   shopPrice: "49,000원"
 }, {
@@ -209,7 +209,7 @@ var shopBoxData = [{
   src: "../img/images/11.페스타 그래픽 티셔츠.jpg",
   imgHidden: "../img/images/11-1.페스타 그래픽 티셔츠.jpg",
   imgHidden2: "../img/images/11-2.페스타 그래픽 티셔츠.jpg",
-  genderAll: "공용 레귤러핏 라이프스타일",
+  gender: "공용 레귤러핏 라이프스타일",
   shopName: "페스타 그래픽 티셔츠",
   shopPrice: "49,000원"
 }, {
@@ -217,7 +217,7 @@ var shopBoxData = [{
   src: "../img/images/12.컴포트핏 인터내셔널 6부 반바지.jpg",
   imgHidden: "../img/images/12-1.컴포트핏 인터내셔널 6부 반바지.jpg",
   imgHidden2: "../img/images/12-2.컴포트핏 인터내셔널 6부 반바지.jpg",
-  genderAll: "공용 라이프스타일",
+  gender: "공용 라이프스타일",
   shopName: "컴포트핏 인터내셔널 6부 반바지",
   shopPrice: "59,000원"
 }, {
@@ -225,7 +225,7 @@ var shopBoxData = [{
   src: "../img/images/13.레터링 그래픽 티셔츠.jpg",
   imgHidden: "../img/images/13-1.레터링 그래픽 티셔츠.jpg",
   imgHidden2: "../img/images/13-2.레터링 그래픽 티셔츠.jpg",
-  genderAll: "공용 컴포트핏 라이프스타일",
+  gender: "공용 컴포트핏 라이프스타일",
   shopName: "레터링 그래픽 티셔츠",
   shopPrice: "49,000원"
 }, {
@@ -233,7 +233,7 @@ var shopBoxData = [{
   src: "../img/images/14.레코드 그래픽 티셔츠.jpg",
   imgHidden: "../img/images/14-1.레코드 그래픽 티셔츠.jpg",
   imgHidden2: "../img/images/14-2.레코드 그래픽 티셔츠.jpg",
-  genderAll: "공용 컴포트핏 라이프스타일",
+  gender: "공용 컴포트핏 라이프스타일",
   shopName: "레코드 그래픽 티셔츠",
   shopPrice: "59,000원"
 }, {
@@ -257,7 +257,7 @@ var shopBoxData = [{
   src: "../img/images/17.핫써머 씨어서커 우븐반바지.jpg",
   imgHidden: "../img/images/17-1.핫써머 씨어서커 우븐반바지.jpg",
   imgHidden2: "../img/images/17-2.핫써머 씨어서커 우븐반바지.jpg",
-  genderAll: "공용 라이프스타일",
+  gender: "공용 라이프스타일",
   shopName: "핫써머 씨어서커 우븐반바지",
   shopPrice: "69,000원"
 }, {
@@ -265,7 +265,7 @@ var shopBoxData = [{
   src: "../img/images/18.핫써머 씨어서커 아노락 바람막이.jpg",
   imgHidden: "../img/images/18-1.핫써머 씨어서커 아노락 바람막이.jpg",
   imgHidden2: "../img/images/18-2.핫써머 씨어서커 아노락 바람막이.jpg",
-  genderAll: "공용 라이프스타일",
+  gender: "공용 라이프스타일",
   shopName: "핫써머 씨어서커 아노락 바람막이",
   shopPrice: "119,000원"
 }, {
@@ -273,7 +273,7 @@ var shopBoxData = [{
   src: "../img/images/19.핫써머 사이드프린트 우븐 반바지.jpg",
   imgHidden: "../img/images/19-1.핫써머 사이드프린트 우븐 반바지.jpg",
   imgHidden2: "../img/images/19-2.핫써머 사이드프린트 우븐 반바지.jpg",
-  genderAll: "공용 레귤러핏 라이프스타일",
+  gender: "공용 레귤러핏 라이프스타일",
   shopName: "핫써머 사이드프린트 우븐 반바지",
   shopPrice: "69,000원"
 }, {
@@ -281,50 +281,55 @@ var shopBoxData = [{
   src: "../img/images/20.레코드 그래픽 티셔츠.jpg",
   imgHidden: "../img/images/20-1.레코드 그래픽 티셔츠.jpg",
   imgHidden2: "../img/images/20-2.레코드 그래픽 티셔츠.jpg",
-  genderAll: "공용 컴포트핏 라이프스타일",
+  gender: "공용 컴포트핏 라이프스타일",
   shopName: "레코드 그래픽 티셔츠",
   shopPrice: "59,000원"
-}, {
-  id: "shoplist21",
+}
+/* { 
+  id: "shoplist21", 
   src: "../img/images/21.컴포트핏 인터내셔널 우븐 후드티.jpg",
   imgHidden: "../img/images/21-1.컴포트핏 인터내셔널 우븐 후드티.jpg",
   imgHidden2: "../img/images/21-2.컴포트핏 인터내셔널 우븐 후드티.jpg",
-  genderAll: "공용 라이프스타일",
-  shopName: "컴포트핏 인터내셔널 우븐 후드티",
-  shopPrice: "119,000원"
-}, {
-  id: "shoplist22",
+  gender: "공용 라이프스타일",
+  shopName : "컴포트핏 인터내셔널 우븐 후드티",
+  shopPrice : "119,000원",
+},
+{ 
+  id: "shoplist22", 
   src: "../img/images/22.레터링 그래픽 티셔츠.jpg",
   imgHidden: "../img/images/22-1.레터링 그래픽 티셔츠.jpg",
   imgHidden2: "../img/images/22-2.레터링 그래픽 티셔츠.jpg",
-  genderAll: "공용 컴포트핏 라이프스타일",
-  shopName: "레터링 그래픽 티셔츠",
-  shopPrice: "49,000원"
-}, {
-  id: "shoplist23",
+  gender: "공용 컴포트핏 라이프스타일",
+  shopName : "레터링 그래픽 티셔츠",
+  shopPrice : "49,000원",
+},
+{ 
+  id: "shoplist23", 
   src: "../img/images/23.컴포트핏 인터내셔널 우븐 후드티.jpg",
   imgHidden: "../img/images/23-1.컴포트핏 인터내셔널 우븐 후드티.jpg",
   imgHidden2: "../img/images/23-2.컴포트핏 인터내셔널 우븐 후드티.jpg",
-  genderAll: "공용 라이프스타일",
-  shopName: "컴포트핏 인터내셔널 우븐 후드티",
-  shopPrice: "119,000원"
-}, {
-  id: "shoplist24",
+  gender: "공용 라이프스타일",
+  shopName : "컴포트핏 인터내셔널 우븐 후드티",
+  shopPrice : "119,000원",
+},
+{ 
+  id: "shoplist24", 
   src: "../img/images/24.플래그 반팔티.jpg",
   imgHidden: "../img/images/24-1.플래그 반팔티.jpg",
   imgHidden2: "../img/images/24-2.플래그 반팔티.jpg",
-  genderAll: "공용 컴포트핏 라이프스타일",
-  shopName: "플래그 반팔티",
-  shopPrice: "39,000원"
-}, {
-  id: "shoplist25",
+  gender: "공용 컴포트핏 라이프스타일",
+  shopName : "플래그 반팔티",
+  shopPrice : "39,000원",
+},
+{ 
+  id: "shoplist25", 
   src: "../img/images/25.테니스 퍼포먼스 배색 카라티셔츠.jpg",
   imgHidden: "../img/images/25-1.테니스 퍼포먼스 배색 카라티셔츠.jpg",
   imgHidden2: "../img/images/25-2.테니스 퍼포먼스 배색 카라티셔츠.jpg",
-  gender: "남성 레귤러핏 테니스 지속가능소재",
-  shopName: "테니스 퍼포먼스 배색 카라티셔츠",
-  shopPrice: "99,000원"
-}];
+  gender: "공용 레귤러핏 테니스 지속가능소재",
+  shopName : "테니스 퍼포먼스 배색 카라티셔츠",
+  shopPrice : "99,000원",
+}, */];
 var _default = shopBoxData;
 exports.default = _default;
 },{}],"서브페이지1/js/sub.js":[function(require,module,exports) {
@@ -332,6 +337,12 @@ exports.default = _default;
 
 var _data = _interopRequireDefault(require("./data.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var lnbMenu1 = document.querySelector('.lnb_menu1');
 var lnbMenu2 = document.querySelector('.lnb_menu2');
 var lnbMenu3 = document.querySelector('.lnb_menu3');
@@ -559,16 +570,74 @@ btnAll.forEach(function (btn) {
 
 var price = document.querySelectorAll('.price');
 var prIco = document.querySelectorAll('.price i');
-price.forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    var icon = btn.querySelector('i');
+
+/* price.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const icon = btn.querySelector('i');
     if (icon.classList.contains('fa-square')) {
       icon.setAttribute('class', 'far fa-check-square');
     } else {
       icon.setAttribute('class', 'far fa-square');
     }
   });
+}); */
+
+price.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var icon = btn.querySelector('i');
+    if (icon.classList.contains('fa-square')) {
+      icon.setAttribute('class', 'far fa-check-square');
+
+      // Get the price range from the button's text content
+      var selectedPriceRange = btn.textContent.trim();
+      var minPrice, maxPrice;
+
+      // Parse the minimum and maximum prices from the selected price range
+      if (selectedPriceRange.includes('이하')) {
+        minPrice = 0;
+        maxPrice = parseInt(selectedPriceRange.split(' ')[0].replace(/,/g, ''));
+      } else if (selectedPriceRange.includes('초과')) {
+        minPrice = parseInt(selectedPriceRange.split(' ')[0].replace(/,/g, ''));
+        maxPrice = Infinity;
+      } else {
+        var _selectedPriceRange$s = selectedPriceRange.split(' ~ ').map(function (price) {
+          return parseInt(price.replace(/,/g, ''));
+        });
+        var _selectedPriceRange$s2 = _slicedToArray(_selectedPriceRange$s, 2);
+        minPrice = _selectedPriceRange$s2[0];
+        maxPrice = _selectedPriceRange$s2[1];
+      }
+
+      // Filter the data based on the selected price range
+      var filteredData = _data.default.filter(function (item) {
+        var itemPrice = parseInt(item.shopPrice.replace(/,/g, ''));
+        return itemPrice >= minPrice && itemPrice <= maxPrice;
+      });
+
+      // Show only the items within the selected price range
+      filteredData.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'block';
+      });
+
+      // Hide the items that are not within the selected price range
+      var nonFilteredData = _data.default.filter(function (item) {
+        var itemPrice = parseInt(item.shopPrice.replace(/,/g, ''));
+        return itemPrice < minPrice || itemPrice > maxPrice;
+      });
+      nonFilteredData.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'none';
+      });
+    } else {
+      icon.setAttribute('class', 'far fa-square');
+
+      // Show all items when the filter is removed
+      _data.default.forEach(function (item) {
+        document.getElementById(item.id).style.display = 'block';
+      });
+    }
+  });
 });
+var container = document.querySelector('.container');
 var genderMan = document.querySelector('.gender_man');
 var genderAll = document.querySelector('.gender_all');
 var ManIco = document.querySelector('.gender_man i');
@@ -577,24 +646,73 @@ var clickMan = false;
 genderMan.addEventListener('click', function () {
   if (clickMan) {
     clickMan = false;
-    ManIco.setAttribute('class', "far fa-square");
+    ManIco.setAttribute('class', 'far fa-square');
+
+    // 체크를 해제하면 display 속성이 none으로 설정된 요소들을 전부 block으로 변경합니다.
+    _data.default.forEach(function (item) {
+      document.getElementById(item.id).style.display = 'block';
+    });
   } else {
     clickMan = true;
-    ManIco.setAttribute('class', "far fa-check-square");
-    AllIco.setAttribute('class', "far fa-square");
+    ManIco.setAttribute('class', 'far fa-check-square');
+    AllIco.setAttribute('class', 'far fa-square');
     clickAll = false;
+    var filteredData = _data.default.filter(function (item) {
+      return item.gender.includes('남성');
+    });
+    filteredData.forEach(function (item) {
+      // item.id를 사용하여 해당 요소를 선택하고 display 속성을 block으로 설정합니다.
+      document.getElementById(item.id).style.display = 'block';
+    });
+    var nonFilteredData = _data.default.filter(function (item) {
+      return !item.gender.includes('남성');
+    });
+    nonFilteredData.forEach(function (item) {
+      // item.id를 사용하여 해당 요소를 선택하고 display 속성을 none으로 설정합니다.
+      document.getElementById(item.id).style.display = 'none';
+    });
   }
+
+  /*   shopBoxData.forEach(item => {
+      if (!item.gender.includes('남성')) {
+        // item.id를 사용하여 해당 요소를 선택하고 display 속성을 block으로 설정합니다.
+        document.getElementById(item.id).style.display = 'none';
+      } else {
+        // item.id를 사용하여 해당 요소를 선택하고 display 속성을 none으로 설정합니다.
+        document.getElementById(item.id).style.display = 'block';
+      }
+    }); */
 });
+
 var clickAll = false;
 genderAll.addEventListener('click', function () {
   if (clickAll) {
     clickAll = false;
     AllIco.setAttribute('class', "far fa-square");
+
+    // 체크를 해제하면 display 속성이 none으로 설정된 요소들을 전부 block으로 변경합니다.
+    _data.default.forEach(function (item) {
+      document.getElementById(item.id).style.display = 'block';
+    });
   } else {
     clickAll = true;
     AllIco.setAttribute('class', "far fa-check-square");
     clickMan = false;
     ManIco.setAttribute('class', "far fa-square");
+    var filteredData = _data.default.filter(function (item) {
+      return item.gender.includes('공용');
+    });
+    filteredData.forEach(function (item) {
+      // item.id를 사용하여 해당 요소를 선택하고 display 속성을 block으로 설정합니다.
+      document.getElementById(item.id).style.display = 'block';
+    });
+    var nonFilteredData = _data.default.filter(function (item) {
+      return !item.gender.includes('공용');
+    });
+    nonFilteredData.forEach(function (item) {
+      // item.id를 사용하여 해당 요소를 선택하고 display 속성을 none으로 설정합니다.
+      document.getElementById(item.id).style.display = 'none';
+    });
   }
 });
 var ninebox = document.querySelector('.ninebox');
@@ -610,15 +728,10 @@ ninebox.addEventListener('click', function () {
     for (var i = 0; i < shopbox.length; i++) {
       shopbox[i].style.width = '272px';
       shopbox[i].style.height = '360px';
-      /*       shopbox[i].style.marginRight = '15px';
-            shopbox[4].style.marginRight = '0px';
-            shopbox[9].style.marginRight = '0px';
-            shopbox[14].style.marginRight = '0px';
-            shopbox[19].style.marginRight = '0px'; */
+      container.style.marginLeft = '10px';
     }
-
-    for (var _i = 0; _i < purchase.length; _i++) {
-      purchase[_i].style.width = '70%';
+    for (var _i2 = 0; _i2 < purchase.length; _i2++) {
+      purchase[_i2].style.width = '70%';
     }
     nineboxstyle.style.color = '#000';
     fourbox.style.color = "#888";
@@ -626,22 +739,13 @@ ninebox.addEventListener('click', function () {
     clickninebox = false;
     clickfourbox = true;
   } else {
-    for (var _i2 = 0; _i2 < shopbox.length; _i2++) {
-      shopbox[_i2].style.width = '340px';
-      shopbox[_i2].style.height = '452.5px';
-      /*       shopbox[i].style.marginRight = '20px';
-            shopbox[3].style.marginRight = '0px';
-            shopbox[7].style.marginRight = '0px';
-            shopbox[11].style.marginRight = '0px';
-            shopbox[15].style.marginRight = '0px';
-            shopbox[19].style.marginRight = '0px';
-            shopbox[4].style.marginRight = '20px';
-            shopbox[9].style.marginRight = '20px';
-            shopbox[14].style.marginRight = '20px'; */
+    for (var _i3 = 0; _i3 < shopbox.length; _i3++) {
+      shopbox[_i3].style.width = '340px';
+      shopbox[_i3].style.height = '452.5px';
+      container.style.marginLeft = '12px';
     }
-
-    for (var _i3 = 0; _i3 < purchase.length; _i3++) {
-      purchase[_i3].style.width = '75%';
+    for (var _i4 = 0; _i4 < purchase.length; _i4++) {
+      purchase[_i4].style.width = '75%';
     }
     nineboxstyle.style.color = '#888';
     fourbox.style.color = "#000";
@@ -655,19 +759,10 @@ fourbox.addEventListener('click', function () {
     for (var i = 0; i < shopbox.length; i++) {
       shopbox[i].style.width = '340px';
       shopbox[i].style.height = '452.5px';
-      /*       shopbox[i].style.marginRight = '20px';
-            shopbox[3].style.marginRight = '0px';
-            shopbox[7].style.marginRight = '0px';
-            shopbox[11].style.marginRight = '0px';
-            shopbox[15].style.marginRight = '0px';
-            shopbox[19].style.marginRight = '0px';
-            shopbox[4].style.marginRight = '20px';
-            shopbox[9].style.marginRight = '20px';
-            shopbox[14].style.marginRight = '20px'; */
+      container.style.marginLeft = '12px';
     }
-
-    for (var _i4 = 0; _i4 < purchase.length; _i4++) {
-      purchase[_i4].style.width = '75%';
+    for (var _i5 = 0; _i5 < purchase.length; _i5++) {
+      purchase[_i5].style.width = '75%';
     }
     nineboxstyle.style.color = '#888';
     fourbox.style.color = "#000";
@@ -675,18 +770,13 @@ fourbox.addEventListener('click', function () {
     clickfourbox = false;
     clickninebox = true;
   } else {
-    for (var _i5 = 0; _i5 < shopbox.length; _i5++) {
-      shopbox[_i5].style.width = '272px';
-      shopbox[_i5].style.height = '360px';
-      /*       shopbox[i].style.marginRight = '15px';
-            shopbox[4].style.marginRight = '0px';
-            shopbox[9].style.marginRight = '0px';
-            shopbox[14].style.marginRight = '0px';
-            shopbox[19].style.marginRight = '0px'; */
+    for (var _i6 = 0; _i6 < shopbox.length; _i6++) {
+      shopbox[_i6].style.width = '272px';
+      shopbox[_i6].style.height = '360px';
+      container.style.marginLeft = '10px';
     }
-
-    for (var _i6 = 0; _i6 < purchase.length; _i6++) {
-      purchase[_i6].style.width = '70%';
+    for (var _i7 = 0; _i7 < purchase.length; _i7++) {
+      purchase[_i7].style.width = '70%';
     }
     nineboxstyle.style.color = '#000';
     fourbox.style.color = "#888";
@@ -724,22 +814,24 @@ for (var i = 0; i < _data.default.length; i++) {
   imgHidden2.setAttribute('class', 'img_hidden2');
   imgHidden2.setAttribute("src", _data.default[i].imgHidden2);
   productDiv.appendChild(imgHidden2);
-  if (_data.default[i].gender !== undefined) {
-    var gender = document.createElement('p');
-    gender.setAttribute('class', 'gender');
-    var genderText = document.createTextNode(_data.default[i].gender);
-    gender.appendChild(genderText);
-    var secondChild = shopMenu[i].childNodes[2];
-    shopMenu[i].insertBefore(gender, secondChild);
-  }
-  if (_data.default[i].genderAll !== undefined) {
-    var _genderAll = document.createElement('p');
-    _genderAll.setAttribute('class', 'genderAll');
-    var genderAllText = document.createTextNode(_data.default[i].genderAll);
-    _genderAll.appendChild(genderAllText);
-    var secondAllChild = shopMenu[i].childNodes[2];
-    shopMenu[i].insertBefore(_genderAll, secondAllChild);
-  }
+  var gender = document.createElement('p');
+  gender.setAttribute('class', 'gender');
+  gender.setAttribute('id', 'gender');
+  var genderText = document.createTextNode(_data.default[i].gender);
+  gender.appendChild(genderText);
+  var secondChild = shopMenu[i].childNodes[2];
+  shopMenu[i].insertBefore(gender, secondChild);
+
+  /*   if (shopBoxData[i].genderAll !== undefined) {
+      const genderAll = document.createElement('p');
+      genderAll.setAttribute('class', 'genderAll');
+      const genderAllText = document.createTextNode(shopBoxData[i].genderAll);
+      genderAll.appendChild(genderAllText);
+    
+      const secondAllChild = shopMenu[i].childNodes[  2];
+      shopMenu[i].insertBefore(genderAll, secondAllChild);
+    } */
+
   var shopName = document.createElement('p');
   shopName.setAttribute('class', 'shopName');
   var shopNameText = document.createTextNode(_data.default[i].shopName);
@@ -759,31 +851,43 @@ for (var i = 0; i < _data.default.length; i++) {
 }
 
 var img_hidden2 = document.querySelectorAll('.img_hidden2');
-var _loop = function _loop(_i7) {
+var _loop = function _loop(_i8) {
   var timer;
-  shopbox[_i7].addEventListener('mouseover', function () {
+  shopbox[_i8].addEventListener('mouseover', function () {
     // img_hidden2[i].style.display = 'block'
     timer = setTimeout(function () {
-      img_hidden2[_i7].style.opacity = '1';
+      img_hidden2[_i8].style.opacity = '1';
     }, 1000);
     setTimeout(function () {
-      img_hidden2[_i7].style.opacity = '0';
+      img_hidden2[_i8].style.opacity = '0';
     }, 3000);
   });
-  shopbox[_i7].addEventListener('mouseout', function () {
+  shopbox[_i8].addEventListener('mouseout', function () {
     clearTimeout(timer);
-    img_hidden2[_i7].style.opacity = '0';
+    img_hidden2[_i8].style.opacity = '0';
     //img_hidden2[i].style.display = 'none' 
   });
 };
-for (var _i7 = 0; _i7 < img_hidden2.length; _i7++) {
-  _loop(_i7);
+for (var _i8 = 0; _i8 < img_hidden2.length; _i8++) {
+  _loop(_i8);
 }
-var genderAllDiv = document.querySelectorAll('.genderAll');
-//const genderDiv = document.querySelectorAll('.gender')
 
-var genderDivClick = false;
-var genderAllDivClick = false;
+/* let itemsPerPage = 20;
+let totalPages = Math.ceil(shopBoxData.length / itemsPerPage);
+
+function updatePagination() {
+  totalPages = Math.ceil(shopBoxData.length / itemsPerPage);
+  renderOtherPagination(1);
+}
+
+//const container = document.querySelector('.container');
+const observer = new MutationObserver(updatePagination);
+observer.observe(container, { childList: true });
+
+function renderPagination(currentPage) {
+
+} //아이템 갯수를 파악하여 최신 업데이트 하는 렌딩페이지  */
+
 var itemsPerPage = 20;
 var totalPages = 5;
 function renderPagination(currentPage) {
@@ -942,7 +1046,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54618" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53956" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -244,11 +244,11 @@ let clickFilter = false;
 
 filter.addEventListener('click', () => {
   if (clickFilter) {
-    menu.style.marginTop = '-352px'; 
+    menu.style.marginTop = '-352px';
     clickFilter = false;
     filterIco.setAttribute('class', "fas fa-minus")
   } else {
-    menu.style.marginTop = '0px'; 
+    menu.style.marginTop = '0px';
     clickFilter = true;
     filterIco.setAttribute('class', "fas fa-plus")
   }
@@ -299,7 +299,7 @@ const price = document.querySelectorAll('.price')
 const prIco = document.querySelectorAll('.price i')
 
 
-price.forEach(btn => {
+/* price.forEach(btn => {
   btn.addEventListener('click', () => {
     const icon = btn.querySelector('i');
     if (icon.classList.contains('fa-square')) {
@@ -308,8 +308,60 @@ price.forEach(btn => {
       icon.setAttribute('class', 'far fa-square');
     }
   });
+}); */
+
+price.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const icon = btn.querySelector('i');
+    if (icon.classList.contains('fa-square')) {
+      icon.setAttribute('class', 'far fa-check-square');
+
+      // Get the price range from the button's text content
+      const selectedPriceRange = btn.textContent.trim();
+      let minPrice, maxPrice;
+
+      // Parse the minimum and maximum prices from the selected price range
+      if (selectedPriceRange.includes('이하')) {
+        minPrice = 0;
+        maxPrice = parseInt(selectedPriceRange.split(' ')[0].replace(/,/g, ''));
+      } else if (selectedPriceRange.includes('초과')) {
+        minPrice = parseInt(selectedPriceRange.split(' ')[0].replace(/,/g, ''));
+        maxPrice = Infinity;
+      } else {
+        [minPrice, maxPrice] = selectedPriceRange.split(' ~ ').map(price => parseInt(price.replace(/,/g, '')));
+      }
+
+      // Filter the data based on the selected price range
+      const filteredData = shopBoxData.filter(item => {
+        const itemPrice = parseInt(item.shopPrice.replace(/,/g, ''));
+        return itemPrice >= minPrice && itemPrice <= maxPrice;
+      });
+
+      // Show only the items within the selected price range
+      filteredData.forEach(item => {
+        document.getElementById(item.id).style.display = 'block';
+      });
+
+      // Hide the items that are not within the selected price range
+      const nonFilteredData = shopBoxData.filter(item => {
+        const itemPrice = parseInt(item.shopPrice.replace(/,/g, ''));
+        return itemPrice < minPrice || itemPrice > maxPrice;
+      });
+      nonFilteredData.forEach(item => {
+        document.getElementById(item.id).style.display = 'none';
+      });
+    } else {
+      icon.setAttribute('class', 'far fa-square');
+
+      // Show all items when the filter is removed
+      shopBoxData.forEach(item => {
+        document.getElementById(item.id).style.display = 'block';
+      });
+    }
+  });
 });
 
+const container = document.querySelector('.container')
 
 const genderMan = document.querySelector('.gender_man')
 const genderAll = document.querySelector('.gender_all')
@@ -320,19 +372,50 @@ const AllIco = document.querySelector('.gender_all i')
 let clickMan = false;
 
 genderMan.addEventListener('click', () => {
-
   if (clickMan) {
     clickMan = false;
-    ManIco.setAttribute('class', "far fa-square")
+    ManIco.setAttribute('class', 'far fa-square');
+
+    // 체크를 해제하면 display 속성이 none으로 설정된 요소들을 전부 block으로 변경합니다.
+    shopBoxData.forEach(item => {
+      document.getElementById(item.id).style.display = 'block';
+    });
 
   } else {
     clickMan = true;
-    ManIco.setAttribute('class', "far fa-check-square")
-
-    AllIco.setAttribute('class', "far fa-square")
+    ManIco.setAttribute('class', 'far fa-check-square');
+    AllIco.setAttribute('class', 'far fa-square');
     clickAll = false;
+
+
+    const filteredData = shopBoxData.filter(item => item.gender.includes('남성'));
+
+    filteredData.forEach(item => {
+      // item.id를 사용하여 해당 요소를 선택하고 display 속성을 block으로 설정합니다.
+      document.getElementById(item.id).style.display = 'block';
+    });
+
+
+    const nonFilteredData = shopBoxData.filter(item => !item.gender.includes('남성'));
+
+    nonFilteredData.forEach(item => {
+      // item.id를 사용하여 해당 요소를 선택하고 display 속성을 none으로 설정합니다.
+      document.getElementById(item.id).style.display = 'none';
+    });
+
   }
-})
+
+  /*   shopBoxData.forEach(item => {
+      if (!item.gender.includes('남성')) {
+        // item.id를 사용하여 해당 요소를 선택하고 display 속성을 block으로 설정합니다.
+        document.getElementById(item.id).style.display = 'none';
+      } else {
+        // item.id를 사용하여 해당 요소를 선택하고 display 속성을 none으로 설정합니다.
+        document.getElementById(item.id).style.display = 'block';
+      }
+    }); */
+
+});
 
 let clickAll = false;
 
@@ -342,12 +425,32 @@ genderAll.addEventListener('click', () => {
     clickAll = false;
     AllIco.setAttribute('class', "far fa-square")
 
+    // 체크를 해제하면 display 속성이 none으로 설정된 요소들을 전부 block으로 변경합니다.
+    shopBoxData.forEach(item => {
+      document.getElementById(item.id).style.display = 'block';
+    });
+
   } else {
     clickAll = true;
     AllIco.setAttribute('class', "far fa-check-square")
 
     clickMan = false;
     ManIco.setAttribute('class', "far fa-square")
+
+    const filteredData = shopBoxData.filter(item => item.gender.includes('공용'));
+
+    filteredData.forEach(item => {
+      // item.id를 사용하여 해당 요소를 선택하고 display 속성을 block으로 설정합니다.
+      document.getElementById(item.id).style.display = 'block';
+    });
+
+
+    const nonFilteredData = shopBoxData.filter(item => !item.gender.includes('공용'));
+
+    nonFilteredData.forEach(item => {
+      // item.id를 사용하여 해당 요소를 선택하고 display 속성을 none으로 설정합니다.
+      document.getElementById(item.id).style.display = 'none';
+    });
 
   }
 })
@@ -369,11 +472,7 @@ ninebox.addEventListener('click', () => {
     for (let i = 0; i < shopbox.length; i++) {
       shopbox[i].style.width = '272px';
       shopbox[i].style.height = '360px';
-      /*       shopbox[i].style.marginRight = '15px';
-            shopbox[4].style.marginRight = '0px';
-            shopbox[9].style.marginRight = '0px';
-            shopbox[14].style.marginRight = '0px';
-            shopbox[19].style.marginRight = '0px'; */
+      container.style.marginLeft = '10px'
     }
     for (let i = 0; i < purchase.length; i++) {
       purchase[i].style.width = '70%';
@@ -387,16 +486,7 @@ ninebox.addEventListener('click', () => {
     for (let i = 0; i < shopbox.length; i++) {
       shopbox[i].style.width = '340px';
       shopbox[i].style.height = '452.5px';
-      /*       shopbox[i].style.marginRight = '20px';
-            shopbox[3].style.marginRight = '0px';
-            shopbox[7].style.marginRight = '0px';
-            shopbox[11].style.marginRight = '0px';
-            shopbox[15].style.marginRight = '0px';
-            shopbox[19].style.marginRight = '0px';
-            shopbox[4].style.marginRight = '20px';
-            shopbox[9].style.marginRight = '20px';
-            shopbox[14].style.marginRight = '20px'; */
-
+     container.style.marginLeft = '12px'
     }
     for (let i = 0; i < purchase.length; i++) {
       purchase[i].style.width = '75%';
@@ -414,15 +504,7 @@ fourbox.addEventListener('click', () => {
     for (let i = 0; i < shopbox.length; i++) {
       shopbox[i].style.width = '340px';
       shopbox[i].style.height = '452.5px';
-      /*       shopbox[i].style.marginRight = '20px';
-            shopbox[3].style.marginRight = '0px';
-            shopbox[7].style.marginRight = '0px';
-            shopbox[11].style.marginRight = '0px';
-            shopbox[15].style.marginRight = '0px';
-            shopbox[19].style.marginRight = '0px';
-            shopbox[4].style.marginRight = '20px';
-            shopbox[9].style.marginRight = '20px';
-            shopbox[14].style.marginRight = '20px'; */
+      container.style.marginLeft = '12px'
     }
     for (let i = 0; i < purchase.length; i++) {
       purchase[i].style.width = '75%';
@@ -436,11 +518,7 @@ fourbox.addEventListener('click', () => {
     for (let i = 0; i < shopbox.length; i++) {
       shopbox[i].style.width = '272px';
       shopbox[i].style.height = '360px';
-      /*       shopbox[i].style.marginRight = '15px';
-            shopbox[4].style.marginRight = '0px';
-            shopbox[9].style.marginRight = '0px';
-            shopbox[14].style.marginRight = '0px';
-            shopbox[19].style.marginRight = '0px'; */
+      container.style.marginLeft = '10px'
     }
     for (let i = 0; i < purchase.length; i++) {
       purchase[i].style.width = '70%';
@@ -499,26 +577,25 @@ for (let i = 0; i < shopBoxData.length; i++) {
   imgHidden2.setAttribute("src", shopBoxData[i].imgHidden2)
   productDiv.appendChild(imgHidden2)
 
-  if(shopBoxData[i].gender !== undefined){
   const gender = document.createElement('p')
   gender.setAttribute('class', 'gender')
+  gender.setAttribute('id', 'gender');
   const genderText = document.createTextNode(shopBoxData[i].gender)
   gender.appendChild(genderText)
 
   const secondChild = shopMenu[i].childNodes[2]
   shopMenu[i].insertBefore(gender, secondChild)
 
-  }
 
-  if (shopBoxData[i].genderAll !== undefined) {
-    const genderAll = document.createElement('p');
-    genderAll.setAttribute('class', 'genderAll');
-    const genderAllText = document.createTextNode(shopBoxData[i].genderAll);
-    genderAll.appendChild(genderAllText);
-  
-    const secondAllChild = shopMenu[i].childNodes[  2];
-    shopMenu[i].insertBefore(genderAll, secondAllChild);
-  }
+  /*   if (shopBoxData[i].genderAll !== undefined) {
+      const genderAll = document.createElement('p');
+      genderAll.setAttribute('class', 'genderAll');
+      const genderAllText = document.createTextNode(shopBoxData[i].genderAll);
+      genderAll.appendChild(genderAllText);
+    
+      const secondAllChild = shopMenu[i].childNodes[  2];
+      shopMenu[i].insertBefore(genderAll, secondAllChild);
+    } */
 
   const shopName = document.createElement('p')
   shopName.setAttribute('class', 'shopName')
@@ -568,60 +645,63 @@ for (let i = 0; i < img_hidden2.length; i++) {
   })
 }
 
+/* let itemsPerPage = 20;
+let totalPages = Math.ceil(shopBoxData.length / itemsPerPage);
 
+function updatePagination() {
+  totalPages = Math.ceil(shopBoxData.length / itemsPerPage);
+  renderOtherPagination(1);
+}
 
+//const container = document.querySelector('.container');
+const observer = new MutationObserver(updatePagination);
+observer.observe(container, { childList: true });
 
+function renderPagination(currentPage) {
 
-
-
-const genderAllDiv = document.querySelectorAll('.genderAll')
-//const genderDiv = document.querySelectorAll('.gender')
-
-
-let genderDivClick = false;
-let genderAllDivClick = false;
+} //아이템 갯수를 파악하여 최신 업데이트 하는 렌딩페이지  */
 
 
 let itemsPerPage = 20;
 let totalPages = 5;
 
 function renderPagination(currentPage) {
-    var pagination = document.getElementById('js-pagination');
-    pagination.innerHTML = '';
+  var pagination = document.getElementById('js-pagination');
+  pagination.innerHTML = '';
 
 
-    for (var i = 1; i <= totalPages; i++) {
-        var li = document.createElement('li');
+  for (var i = 1; i <= totalPages; i++) {
+    var li = document.createElement('li');
 
-        var a = document.createElement('a');
-        a.href = '#';
-        a.textContent = i;
-        if (i === currentPage) {
-            a.classList.add('active');
-        }
-        a.addEventListener('click', (function(i) {
-            return function(event) {
-                event.preventDefault();
-                renderPage(i);
-                renderPagination(i);
-            };
-        })(i));
-        li.appendChild(a);
-        pagination.appendChild(li);
+    var a = document.createElement('a');
+    a.href = '#';
+    a.textContent = i;
+    if (i === currentPage) {
+      a.classList.add('active');
     }
+    a.addEventListener('click', (function (i) {
+      return function (event) {
+        event.preventDefault();
+        renderPage(i);
+        renderPagination(i);
+      };
+    })(i));
+    li.appendChild(a);
+    pagination.appendChild(li);
+  }
 }
 
 function renderPage(page) {
-    var start = (page - 1) * itemsPerPage;
-    var end = start + itemsPerPage;
-    var shopBoxes = document.querySelectorAll('.shop_box');
-    for (var i = 0; i < shopBoxes.length; i++) {
-        if (i >= start && i < end) {
-            shopBoxes[i].style.display = 'block';
-        } else {
-            shopBoxes[i].style.display = 'none';
-        }
+  var start = (page - 1) * itemsPerPage;
+  var end = start + itemsPerPage;
+  var shopBoxes = document.querySelectorAll('.shop_box');
+  for (var i = 0; i < shopBoxes.length; i++) {
+    if (i >= start && i < end) {
+      shopBoxes[i].style.display = 'block';
+    } else {
+      shopBoxes[i].style.display = 'none';
     }
+  }
 }
 
 renderPage(1);
@@ -636,22 +716,22 @@ function renderOtherPagination(currentPage) {
 
   var prevPage = currentPage - 1;
   if (prevPage < firstPage) {
-      prevPage = firstPage;
+    prevPage = firstPage;
   }
 
   var nextPage = currentPage + 1;
   if (nextPage > lastPage) {
-      nextPage = lastPage;
+    nextPage = lastPage;
   }
 
   var firstLi = document.createElement('li');
   var firstA = document.createElement('a');
   firstA.href = '#';
   firstA.innerHTML = '<i class="fas fa-angle-double-left"></i>';
-  firstA.addEventListener('click', function(event) {
-      event.preventDefault();
-      renderPage(firstPage);
-      renderOtherPagination(firstPage);
+  firstA.addEventListener('click', function (event) {
+    event.preventDefault();
+    renderPage(firstPage);
+    renderOtherPagination(firstPage);
   });
   firstLi.appendChild(firstA);
   pagination.appendChild(firstLi);
@@ -660,41 +740,41 @@ function renderOtherPagination(currentPage) {
   var prevA = document.createElement('a');
   prevA.href = '#';
   prevA.innerHTML = '<i class="fas fa-angle-left"></i>';
-  prevA.addEventListener('click', function(event) {
-      event.preventDefault();
-      renderPage(prevPage);
-      renderOtherPagination(prevPage);
+  prevA.addEventListener('click', function (event) {
+    event.preventDefault();
+    renderPage(prevPage);
+    renderOtherPagination(prevPage);
   });
   prevLi.appendChild(prevA);
   pagination.appendChild(prevLi);
 
   for (var i = 1; i <= totalPages; i++) {
-      var li = document.createElement('li');
-      var a = document.createElement('a');
-      a.href = '#';
-      a.textContent = i;
-      if (i === currentPage) {
-          a.classList.add('active');
-      }
-      a.addEventListener('click', (function(i) {
-          return function(event) {
-              event.preventDefault();
-              renderPage(i);
-              renderOtherPagination(i);
-          };
-      })(i));
-      li.appendChild(a);
-      pagination.appendChild(li);
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = '#';
+    a.textContent = i;
+    if (i === currentPage) {
+      a.classList.add('active');
+    }
+    a.addEventListener('click', (function (i) {
+      return function (event) {
+        event.preventDefault();
+        renderPage(i);
+        renderOtherPagination(i);
+      };
+    })(i));
+    li.appendChild(a);
+    pagination.appendChild(li);
   }
 
   var nextLi = document.createElement('li');
   var nextA = document.createElement('a');
   nextA.href = '#';
   nextA.innerHTML = '<i class="fas fa-angle-right"></i>';
-  nextA.addEventListener('click', function(event) {
-      event.preventDefault();
-      renderPage(nextPage);
-      renderOtherPagination(nextPage);
+  nextA.addEventListener('click', function (event) {
+    event.preventDefault();
+    renderPage(nextPage);
+    renderOtherPagination(nextPage);
   });
   nextLi.appendChild(nextA);
   pagination.appendChild(nextLi);
@@ -703,15 +783,14 @@ function renderOtherPagination(currentPage) {
   var lastA = document.createElement('a');
   lastA.href = '#';
   lastA.innerHTML = '<i class="fas fa-angle-double-right"></i>';
-  lastA.addEventListener('click', function(event) {
-      event.preventDefault();
-      renderPage(lastPage);
-      renderOtherPagination(lastPage);
+  lastA.addEventListener('click', function (event) {
+    event.preventDefault();
+    renderPage(lastPage);
+    renderOtherPagination(lastPage);
   });
   lastLi.appendChild(lastA);
   pagination.appendChild(lastLi);
-}
-
+} 
 
 const wingBanner = document.querySelector('.wing_banner')
 
@@ -730,14 +809,14 @@ $('.down').on('click', function () {
 })
 
 
-wingBanner.addEventListener('mouseover' , () => {
-  
+wingBanner.addEventListener('mouseover', () => {
+
   wingBanner.style.right = '0px'
 
 })
-wingBanner.addEventListener('mouseout' , () => {
-  
+
+wingBanner.addEventListener('mouseout', () => {
+
   wingBanner.style.right = '-49px'
 
 })
-

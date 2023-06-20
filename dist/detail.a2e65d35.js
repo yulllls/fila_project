@@ -885,11 +885,6 @@ document.querySelector('.inquiry_btn').addEventListener('click', function () {
   var listComment = document.querySelector('.list_comment'); // 변수생성
   var inquiryCommentList = document.querySelector('.inquiry_comment_list'); // 변수 생성
 
-  /*  if (userName.value.length <= 0 || !checkedItem || !selectedSlAll) {
-     alert('이름, 점수, 사이즈를 입력해주세요');
-     return;
-   } */
-
   var newP = document.createElement('p'); // newP라는 변수를 만들면서 p 태그를 생성
   var newText = document.createElement('span');
   newText.setAttribute('class', 'detail');
@@ -1057,7 +1052,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54618" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53956" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

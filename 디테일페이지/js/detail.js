@@ -932,12 +932,6 @@ document.querySelector('.inquiry_btn').addEventListener('click', function () {
   // add_btn = button 을 (클릭 했을때, 동작한다) {}
   const listComment = document.querySelector('.list_comment') // 변수생성
   const inquiryCommentList = document.querySelector('.inquiry_comment_list') // 변수 생성
-  
-
- /*  if (userName.value.length <= 0 || !checkedItem || !selectedSlAll) {
-    alert('이름, 점수, 사이즈를 입력해주세요');
-    return;
-  } */
 
   let newP = document.createElement('p') // newP라는 변수를 만들면서 p 태그를 생성
   let newText = document.createElement('span');

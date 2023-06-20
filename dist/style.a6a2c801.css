@@ -961,4 +961,105 @@ header .header_main .gnb {
   font-weight: bold;
 }
 
+.wing_banner {
+  width: 80px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  right: -49px;
+  transform: translateY(-50%);
+  border: 1px solid #888;
+  box-sizing: border-box;
+  z-index: 9999;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+  display: flex;
+}
+
+.wing_banner .wing_left {
+  width: 30px;
+  height: 50px;
+}
+
+.wing_banner .wing_left .fa-angle-double-left {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.wing_banner .wing_left p {
+  text-align: center;
+  margin-top: 15px;
+  line-height: 25px;
+}
+
+.wing_banner .wing_right {
+  width: 50px;
+  border-left: 1px solid #888;
+}
+
+.wing_banner .wing_right div {
+  width: 49px;
+  height: 50px;
+  border-bottom: 1px solid #888;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.wing_banner .wing_right div img {
+  width: 50px;
+  height: 50px;
+}
+
+.wing_banner .wing_right div .fas {
+  position: absolute;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #888;
+}
+
+.wing_banner .wing_right div .fa-home {
+  font-size: 38px;
+  top: 7px;
+  left: 3px;
+}
+
+.wing_banner .wing_right div .fa-store {
+  font-size: 32px;
+  top: 10px;
+  left: 5px;
+}
+
+.wing_banner .wing_right div .fa-shopping-basket {
+  font-size: 35px;
+  top: 7px;
+  left: 5px;
+}
+
+.wing_banner .wing_right div .fa-user {
+  font-size: 40px;
+  top: 5px;
+  left: 7px;
+}
+
+.wing_banner .wing_right div .fa-caret-up {
+  font-size: 60px;
+  top: -9px;
+  left: 5px;
+}
+
+.wing_banner .wing_right div .fa-caret-down {
+  font-size: 60px;
+  top: -7px;
+  left: 5px;
+}
+
+.wing_banner .wing_right .down {
+  border: none;
+}
+
+.wing_banner .wing_right .fas:hover {
+  color: red;
+}
+
 /*# sourceMappingURL=/style.a6a2c801.css.map */
